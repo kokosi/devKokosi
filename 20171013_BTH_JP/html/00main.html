@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+    <!--수정해야하는 영역-->
+    <meta name="description" content="第一艦隊" />
+    <meta name="author" content="第一艦隊" />
+    <meta name="keywords" content="第一艦隊,第一艦隊" />
+    <title>第一艦隊</title>
+    <!--css-->
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery.bxslider.css" />
+    <!--js-->
+    <script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.bxslider.min.js"></script>
+
+    <script type="text/javascript">
+        $(function(){
+            var slider = $('.slider').bxSlider({
+                mode:'fade',
+                speed:500,
+                auto:true,
+                controls:false,
+                pagerCustom: '.slidePaging',
+                onSlideAfter: function() {
+                    slider.stopAuto();
+                    slider.startAuto();
+                }
+            });
+
+            //탭 동작 확인
+            var tab;
+
+            $(document).ready(function(e) {
+                $(".noticeList").hide();
+                $("#list01").show();
+
+                tab=$(".tab > ul > li a");
+                tab.bind("click",onClick);
+            });
+
+            function onClick(){
+                $(this).parent().addClass("on").siblings().removeClass("on");
+                $(".noticeList").hide();
+                $($(this).attr("href")).show();
+                return false;
+            }
+
+
+        });
+    </script>
+
+</head>
+<body>
+
+<!-- brabragames gnb 영역-->
+<div style="width:100%;height:40px;"></div>
+<!-- gnb 영역 -->
+
+<div id="wrap">
+
+    <!--header-->
+    <header id="hdWrap">
+        <h1 class="logo"><a href="#"><img src="../images/common/logo.png" alt="第一艦隊"></a></h1>
+        <h2 class="hidden">Top Menu</h2>
+        <nav class="navWrap clearfix">
+            <ul class="navList">
+                <li>
+                    <a href="#">ニュース-NEWS</a>
+                    <ul class="mainSub">
+                        <li><a href="#"><span>総合</span> / </a></li>
+                        <li><a href="#"><span>イベント</span> / </a></li>
+                        <li><a href="#"><span>運営</span> / </a></li>
+                        <li><a href="#"><span>メンテナンス</span></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">ガイド-GUIDE</a>
+                    <ul class="mainSub">
+                        <li><a href="#"><span>第一艦隊とは</span> / </a></li>
+                        <li><a href="#"><span>初めての方へ</span> / </a></li>
+                        <li><a href="#"><span>プレイガイド</span></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">コミュニティ-COMMUNITY</a>
+                    <ul class="mainSub">
+                        <li><a href="#"><span>自由掲示板 </span> / </a></li>
+                        <li><a href="#"><span>画像掲示板</span></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">ショップ-SHOP</a>
+                    <ul class="mainSub">
+                        <li><a href="#"><span>金貨購入 </span> / </a></li>
+                        <li><a href="#"><span>購入履歴</span></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">サポート-SUPPORT</a>
+                    <ul class="mainSub faq">
+                        <li><a href="#"><span>FAQ </span> / </a></li>
+                        <li><a href="#"><span>お問い合わせ </span> / </a></li>
+                        <li><a href="#"><span>規約・ポリシー</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--main content-->
+    <section id="mainWrap">
+
+        <!--slider/visual-->
+        <div class="slideWrap">
+            <h2 class="hidden">Slide Visual</h2>
+            <ul class="slider">
+                <li><a href="#"><img src="../images/main/temp_slide.png" alt="slide temp img" /></a></li>
+                <li><a href="#"><img src="../images/main/temp_slide.png" alt="slide temp img" /></a></li>
+                <li><a href="#"><img src="../images/main/temp_slide.png" alt="slide temp img" /></a></li>
+                <li><a href="#"><img src="../images/main/temp_slide.png" alt="slide temp img" /></a></li>
+                <li><a href="#"><img src="../images/main/temp_slide.png" alt="slide temp img" /></a></li>
+            </ul>
+            <div class="slidePaging">
+                <div><a data-slide-index="0" href="">01</a></div>
+                <div><a data-slide-index="1" href="">02</a></div>
+                <div><a data-slide-index="2" href="">03</a></div>
+                <div><a data-slide-index="3" href="">04</a></div>
+                <div><a data-slide-index="4" href="">05</a></div>
+            </div>
+        </div>
+
+        <!--left content-->
+        <div class="leftContent">
+            <!--game start-->
+            <div class="gameStart">
+                <h2 class="hidden">Game start</h2>
+                <a href="#">GAME START</a>
+            </div>
+            <!--before login-->
+            <div class="Blogin infoBox">
+                <h2 class="hidden">Login area</h2>
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend></legend>
+                        <div class="loginInput">
+                            <input type="text" class="id" placeholder="ID" />
+                            <input type="password" class="pwd" placeholder="PASSWORD" />
+                        </div>
+                        <p class="loginBtn"><input type="image" src="../images/common/btn_login.png" alt="login"/></p>
+                    </fieldset>
+                </form>
+                <p class="idpwMiss"><a href="#">ID/パスワード忘れた方 ▶</a></p>
+                <ul class="loginSocial">
+                    <li><a href="#"><img src="../images/common/btn_open01_yahoo.jpg" alt="Yahoo login"/></a></li>
+                    <li><a href="#"><img src="../images/common/btn_open02_google.jpg" alt="Google login"/></a></li>
+                    <li><a href="#"><img src="../images/common/btn_open03_facebook.jpg" alt="Facebook login"/></a></li>
+                    <li><a href="#"><img src="../images/common/btn_open04_twitter.jpg" alt="Twitter login"/></a></li>
+                </ul>
+                <p class="loginJoin"><a href="#"><img src="../images/common/btn_join.png" alt="join"/></a></p>
+            </div>
+            <!--after login-->
+            <!--<div  class="Alogin infoBox">
+                <h2 class="hidden">My info area</h2>
+                <p><strong>ようこそ！第一艦隊へ</strong></p>
+                <p class="userName"><strong>【あああああああ】</strong>様</p>
+                <p class="serverInfo">
+                    <span style="padding-left: 8px;">最近のアクセスサーバー</span><br>
+                    【<span class="serverName">あああああああ</span>】サーバー
+                </p>
+                <p class="myCoin">
+                    保有Bコイン：999、999
+                    <span><a href="#"><img src="../images/common/btn_coin.png" alt="決済"></a></span>
+                </p>
+                <div class="myInfo">
+                    <a href="#"><img src="../images/common/btn_mypage.png" alt="マイページへ"/></a>
+                    <a href="#"><img src="../images/common/btn_logout.png" alt="ログアウト"/></a>
+                </div>
+            </div>-->
+            <!--browser down-->
+            <div class="brDown">
+                <h2 class="hidden">最新バージョン</h2>
+                <ul>
+                    <li><a href="#"><img src="../images/main/btn_purchase.jpg" alt="銀貨購入" /></a></li>
+                    <li><a href="#"><img src="../images/main/btn_guide.jpg" alt="プレイガイド" /></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--middle content-->
+        <div class="middleContent">
+            <!--notice-->
+            <div class="mainNotice">
+                <h2 class="hidden">Notice</h2>
+                <!--tab-->
+                <div class="tab">
+                    <ul>
+                        <li class="on"><a href="#list01">総合</a></li>
+                        <li><a href="#list02">イベント</a></li>
+                        <li><a href="#list03">運営</a></li>
+                        <li><a href="#list04">メンテナンス</a></li>
+                    </ul>
+                    <p class="more"><a href="#"><span>+</span> もっと見る</a></p>
+                </div>
+                <!--notice list-->
+                <div class="noticeList" id="list01">
+                    <h2 class="hidden">総合</h2>
+                    <table>
+                        <caption></caption>
+                        <colgroup>
+                            <col width="15%">
+                            <col width="15%">
+                            <col width="60%">
+                            <col width="10%">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <td class="category"><img src="../images/common/icon_event.png" alt="イベント"/></td>
+                            <td class="date">9999.99.99</td>
+                            <td class="title"><a href="#">お知らせですお知らせです。お知らせですお知...</a></td>
+                            <!--신규게시물일 경우 노출-->
+                            <td class="iconNew">NEW</td>
+                        </tr>
+                        <tr>
+                            <td class="category"><img src="../images/common/icon_admin.png" alt="メンテナンス"/></td>
+                            <td class="date">9999.99.99</td>
+                            <td class="title"><a href="#">お知らせですお知らせです。お知らせですお知...</a></td>
+                            <!--신규게시물이 아닐 경우 blank 처리-->
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="category"><img src="../images/common/icon_manage.png" alt="運営"/></td>
+                            <td class="date">9999.99.99</td>
+                            <td class="title"><a href="#">お知らせですお知らせです。お知らせですお知...</a></td>
+                            <!--신규게시물이 아닐 경우 blank 처리-->
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="category"><img src="../images/common/icon_event.png" alt="イベント"/></td>
+                            <td class="date">9999.99.99</td>
+                            <td class="title"><a href="#">お知らせですお知らせです。お知らせですお知...</a></td>
+                            <!--신규게시물이 아닐 경우 blank 처리-->
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="category"><img src="../images/common/icon_admin.png" alt="メンテナンス"/></td>
+                            <td class="date">9999.99.99</td>
+                            <td class="title"><a href="#">お知らせですお知らせです。お知らせですお知...</a></td>
+                            <!--신규게시물이 아닐 경우 blank 처리-->
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="category"><img src="../images/common/icon_manage.png" alt="運営"/></td>
+                            <td class="date">9999.99.99</td>
+                            <td class="title"><a href="#">お知らせですお知らせです。お知らせですお知...</a></td>
+                            <!--신규게시물이 아닐 경우 blank 처리-->
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="noticeList" id="list02">
+                    <h2 class="hidden">イベント</h2>
+                    <table>
+                        <caption></caption>
+                        <colgroup>
+                            <col width="15%">
+                            <col width="15%">
+                            <col width="60%">
+                            <col width="10%">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <td class="category"><img src="../images/common/icon_event.png" alt="イベント"/></td>
+                            <td class="date">9999.99.98</td>
+                            <td class="title"><a href="#">お知らせですお知らせです。お知らせですお知...</a></td>
+                            <!--신규게시물일 경우 노출-->
+                            <td class="iconNew">NEW</td>
+                        </tr>
+                        <tr>
+                            <td class="category"><img src="../images/common/icon_admin.png" alt="メンテナンス"/></td>
+                            <td class="date">9999.99.99</td>
+                            <td class="title"><a href="#">お知らせですお知らせです。お知らせですお知...</a></td>
+                            <!--신규게시물이 아닐 경우 blank 처리-->
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="category"><img src="../images/common/icon_manage.png" alt="運営"/></td>
+                            <td class="date">9999.99.99</td>
+                            <td class="title"><a href="#">お知らせですお知らせです。お知らせですお知...</a></td>
+                            <!--신규게시물이 아닐 경우 blank 처리-->
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="category"><img src="../images/common/icon_event.png" alt="イベント"/></td>
+                            <td class="date">9999.99.99</td>
+                            <td class="title"><a href="#">お知らせですお知らせです。お知らせですお知...</a></td>
+                            <!--신규게시물이 아닐 경우 blank 처리-->
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="category"><img src="../images/common/icon_admin.png" alt="メンテナンス"/></td>
+                            <td class="date">9999.99.99</td>
+                            <td class="title"><a href="#">お知らせですお知らせです。お知らせですお知...</a></td>
+                            <!--신규게시물이 아닐 경우 blank 처리-->
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="category"><img src="../images/common/icon_manage.png" alt="運営"/></td>
+                            <td class="date">9999.99.99</td>
+                            <td class="title"><a href="#">お知らせですお知らせです。お知らせですお知...</a></td>
+                            <!--신규게시물이 아닐 경우 blank 처리-->
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="noticeList" id="list03">
+                    <h2 class="hidden">運営</h2>
+                    <table>
+                        <caption></caption>
+                        <colgroup>
+                            <col width="15%">
+                            <col width="15%">
+                            <col width="60%">
+                            <col width="10%">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <td class="category"><img src="../images/common/icon_event.png" alt="イベント"/></td>
+                            <td class="date">9999.99.97</td>
+                            <td class="title"><a href="#">お知らせですお知らせです。お知らせですお知...</a></td>
+                            <!--신규게시물일 경우 노출-->
+                            <td class="iconNew">NEW</td>
+                        </tr>
+                        <tr>
+                            <td class="category"><img src="../images/common/icon_admin.png" alt="メンテナンス"/></td>
+                            <td class="date">9999.99.99</td>
+                            <td class="title"><a href="#">お知らせですお知らせです。お知らせですお知...</a></td>
+                            <!--신규게시물이 아닐 경우 blank 처리-->
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="category"><img src="../images/common/icon_manage.png" alt="運営"/></td>
+                            <td class="date">9999.99.99</td>
+                            <td class="title"><a href="#">お知らせですお知らせです。お知らせですお知...</a></td>
+                            <!--신규게시물이 아닐 경우 blank 처리-->
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="category"><img src="../images/common/icon_event.png" alt="イベント"/></td>
+                            <td class="date">9999.99.99</td>
+                            <td class="title"><a href="#">お知らせですお知らせです。お知らせですお知...</a></td>
+                            <!--신규게시물이 아닐 경우 blank 처리-->
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="category"><img src="../images/common/icon_admin.png" alt="メンテナンス"/></td>
+                            <td class="date">9999.99.99</td>
+                            <td class="title"><a href="#">お知らせですお知らせです。お知らせですお知...</a></td>
+                            <!--신규게시물이 아닐 경우 blank 처리-->
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="category"><img src="../images/common/icon_manage.png" alt="運営"/></td>
+                            <td class="date">9999.99.99</td>
+                            <td class="title"><a href="#">お知らせですお知らせです。お知らせですお知...</a></td>
+                            <!--신규게시물이 아닐 경우 blank 처리-->
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="noticeList" id="list04">
+                    <h2 class="hidden">メンテナンス</h2>
+                    <table>
+                        <caption></caption>
+                        <colgroup>
+                            <col width="15%">
+                            <col width="15%">
+                            <col width="60%">
+                            <col width="10%">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <td class="category"><img src="../images/common/icon_event.png" alt="イベント"/></td>
+                            <td class="date">9999.99.96</td>
+                            <td class="title"><a href="#">お知らせですお知らせです。お知らせですお知...</a></td>
+                            <!--신규게시물일 경우 노출-->
+                            <td class="iconNew">NEW</td>
+                        </tr>
+                        <tr>
+                            <td class="category"><img src="../images/common/icon_admin.png" alt="メンテナンス"/></td>
+                            <td class="date">9999.99.99</td>
+                            <td class="title"><a href="#">お知らせですお知らせです。お知らせですお知...</a></td>
+                            <!--신규게시물이 아닐 경우 blank 처리-->
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="category"><img src="../images/common/icon_manage.png" alt="運営"/></td>
+                            <td class="date">9999.99.99</td>
+                            <td class="title"><a href="#">お知らせですお知らせです。お知らせですお知...</a></td>
+                            <!--신규게시물이 아닐 경우 blank 처리-->
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="category"><img src="../images/common/icon_event.png" alt="イベント"/></td>
+                            <td class="date">9999.99.99</td>
+                            <td class="title"><a href="#">お知らせですお知らせです。お知らせですお知...</a></td>
+                            <!--신규게시물이 아닐 경우 blank 처리-->
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="category"><img src="../images/common/icon_admin.png" alt="メンテナンス"/></td>
+                            <td class="date">9999.99.99</td>
+                            <td class="title"><a href="#">お知らせですお知らせです。お知らせですお知...</a></td>
+                            <!--신규게시물이 아닐 경우 blank 처리-->
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="category"><img src="../images/common/icon_manage.png" alt="運営"/></td>
+                            <td class="date">9999.99.99</td>
+                            <td class="title"><a href="#">お知らせですお知らせです。お知らせですお知...</a></td>
+                            <!--신규게시물이 아닐 경우 blank 처리-->
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!--media-->
+            <div class="mainMedia">
+                <h2 class="hidden">Media</h2>
+                <div class="conMedia">
+                    <a href="#">
+                        <img src="../images/main/temp_movie01.jpg" alt="media temp"/>
+                        <p class="titleMedia">ムービー</p>
+                    </a>
+                </div>
+                <div class="conMedia" style="margin-left: 5px;">
+                    <a href="#">
+                        <img src="../images/main/temp_movie01.jpg" alt="media temp"/>
+                        <p class="titleMedia">ムービー</p>
+                    </a>
+                </div>
+                <div class="socialMedia">
+                    <img src="../images/main/temp_twitter.png" alt="twitter"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+
+        <!--right banner-->
+        <div class="banner">
+            <h2 class="hidden">Banner</h2>
+            <img src="../images/common/blank.jpg" alt="banner" />
+        </div>
+
+    </section>
+
+    <!--footer-->
+    <footer id="ftWrap">
+        <div class="footer">
+            <div class="ftLogo">
+                <p><img src="../images/common/logo_br.png" alt="BRAEVE"></p>
+                <p><img src="../images/common/logo_dev.png" alt=""></p>
+            </div>
+            <div class="ftInfo">
+                <ul class="clearfix">
+                    <li><a href="#">運営会社</a></li>
+                    <li><a href="#">利用規約</a></li>
+                    <li><a href="#">プライバシーポリシー</a></li>
+                    <li><a href="#">特定商取引法の表記</a></li>
+                </ul>
+                <p class="copy">
+                    Copyright &copy; BRAEVE Co.,Ltd. All Rights Reserved.<br>
+                    Copyright &copy;2017 Yesgame.com. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+</body>
+</html>

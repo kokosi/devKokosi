@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+    <!--수정해야하는 영역-->
+    <meta name="description" content="第一艦隊" />
+    <meta name="author" content="第一艦隊" />
+    <meta name="keywords" content="第一艦隊,第一艦隊" />
+    <title>第一艦隊</title>
+    <!--css-->
+    <link rel="stylesheet" type="text/css" href="../css/sub.css" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery.bxslider.css" />
+    <!--js-->
+    <script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.bxslider.min.js"></script>
+
+    <script type="text/javascript">
+        $(function(){
+            var slider = $('.slider').bxSlider({
+                mode:'fade',
+                speed:500,
+                auto:true,
+                controls:false,
+                pagerCustom: '.slidePaging',
+                onSlideAfter: function() {
+                    slider.stopAuto();
+                    slider.startAuto();
+                }
+            });
+
+            //탭 동작 확인
+            var tab;
+
+            $(document).ready(function(e) {
+                $(".noticeList").hide();
+                $("#list01").show();
+
+                tab=$(".tab > ul > li a");
+                tab.bind("click",onClick);
+            });
+
+            function onClick(){
+                $(this).parent().addClass("on").siblings().removeClass("on");
+                $(".noticeList").hide();
+                $($(this).attr("href")).show();
+                return false;
+            }
+
+
+        });
+    </script>
+
+</head>
+<body>
+
+<!-- brabragames gnb 영역-->
+<div style="width:100%;height:40px;"></div>
+<!-- gnb 영역 -->
+
+<div id="wrap">
+
+    <!--header-->
+    <header id="hdWrap">
+        <h1 class="logo"><a href="#"><img src="../images/common/logo.png" alt="第一艦隊"></a></h1>
+        <h2 class="hidden">Top Menu</h2>
+        <nav class="navWrap clearfix">
+            <ul class="navList">
+                <li>
+                    <a href="#">ニュース-NEWS</a>
+                    <ul class="mainSub">
+                        <li><a href="#"><span>総合</span> / </a></li>
+                        <li><a href="#"><span>イベント</span> / </a></li>
+                        <li><a href="#"><span>運営</span> / </a></li>
+                        <li><a href="#"><span>メンテナンス</span></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">ガイド-GUIDE</a>
+                    <ul class="mainSub">
+                        <li><a href="#"><span>第一艦隊とは</span> / </a></li>
+                        <li><a href="#"><span>初めての方へ</span> / </a></li>
+                        <li><a href="#"><span>プレイガイド</span></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">コミュニティ-COMMUNITY</a>
+                    <ul class="mainSub">
+                        <li><a href="#"><span>自由掲示板 </span> / </a></li>
+                        <li><a href="#"><span>画像掲示板</span></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">ショップ-SHOP</a>
+                    <ul class="mainSub">
+                        <li><a href="#"><span>金貨購入 </span> / </a></li>
+                        <li><a href="#"><span>購入履歴</span></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">サポート-SUPPORT</a>
+                    <ul class="mainSub faq">
+                        <li><a href="#"><span>FAQ </span> / </a></li>
+                        <li><a href="#"><span>お問い合わせ </span> / </a></li>
+                        <li><a href="#"><span>規約・ポリシー</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--sub main content-->
+    <section id="subWrap">
+
+        <!--left content-->
+        <div class="leftContent">
+            <!--game start-->
+            <div class="gameStart">
+                <h2 class="hidden">Game start</h2>
+                <a href="#">GAME START</a>
+            </div>
+            <!--before login-->
+            <div class="Blogin infoBox">
+                <h2 class="hidden">Login area</h2>
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend></legend>
+                        <div class="loginInput">
+                            <input type="text" class="id" placeholder="ID" />
+                            <input type="password" class="pwd" placeholder="PASSWORD" />
+                        </div>
+                        <p class="loginBtn"><input type="image" src="../images/common/btn_login.png" alt="login"/></p>
+                    </fieldset>
+                </form>
+                <p class="idpwMiss"><a href="#">ID/パスワード忘れた方 ▶</a></p>
+                <ul class="loginSocial">
+                    <li><a href="#"><img src="../images/common/btn_open01_yahoo.jpg" alt="Yahoo login"/></a></li>
+                    <li><a href="#"><img src="../images/common/btn_open02_google.jpg" alt="Google login"/></a></li>
+                    <li><a href="#"><img src="../images/common/btn_open03_facebook.jpg" alt="Facebook login"/></a></li>
+                    <li><a href="#"><img src="../images/common/btn_open04_twitter.jpg" alt="Twitter login"/></a></li>
+                </ul>
+                <p class="loginJoin"><a href="#"><img src="../images/common/btn_join.png" alt="join"/></a></p>
+            </div>
+            <!--after login-->
+            <!--<div  class="Alogin infoBox">
+                <h2 class="hidden">My info area</h2>
+                <p><strong>ようこそ！第一艦隊へ</strong></p>
+                <p class="userName"><strong>【あああああああ】</strong>様</p>
+                <p class="serverInfo">
+                    <span style="padding-left: 8px;">最近のアクセスサーバー</span><br>
+                    【<span class="serverName">あああああああ</span>】サーバー
+                </p>
+                <p class="myCoin">
+                    保有Bコイン：999、999
+                    <span><a href="#"><img src="../images/common/btn_coin.png" alt="決済"></a></span>
+                </p>
+                <div class="myInfo">
+                    <a href="#"><img src="../images/common/btn_mypage.png" alt="マイページへ"/></a>
+                    <a href="#"><img src="../images/common/btn_logout.png" alt="ログアウト"/></a>
+                </div>
+            </div>-->
+            <!--sub menu-->
+            <div class="subMenu">
+                <h2 class="hidden">Sub Menu</h2>
+                <p><img src="../images/sub/sub_leftT02_guide.jpg" alt="ガイド"/></p>
+                <ul class="subMenu02">
+                    <li><a href="#">第一艦隊とは</a></li>
+                    <li class="on"><a href="#">初めての方へ</a></li>
+                    <li><a href="#">プレイガイド</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!--middle content-->
+        <div class="middleContent">
+            <div class="contentWrap">
+                <h2 class="subTitle"><img src="../images/sub/sub_title02_guide02.png" alt="初めての方へ" /></h2>
+                <hr>
+                <!--sub tab-->
+                <div class="subTab">
+                    <ul class="clearfix">
+                        <li><a href="#">第一艦隊とは</a></li>
+                        <li class="on"><a href="#">初めての方へ</a></li>
+                        <li><a href="#">プレイガイド</a></li>
+                    </ul>
+                </div>
+                <!--guide main-->
+                <div class="guideWrap">
+                    <h2 class="hidden">Guide</h2>
+                    <div class="begin">
+                        <ul>
+                            <li>
+                                <h3 class="hidden">1. 会員登録</h3>
+                                <p class="txt">
+                                    ゲームプレイするには<br>
+                                    <span class="yellow">【BRABRAGames】</span>の<span style="color: #ff3000;">会員登録が必要になります。</span><br>
+                                    まだ会員登録していない方は下部のボタンより<br>
+                                    会員登録してください。<br>
+                                    facebook IDをお持ちの方はOpenIDによる<br>
+                                    ログインもご利用いただけます。
+                                </p>
+                                <a class="beginOpen" href="#">⇒OpenID (外部アカウント) ご利用ガイド</a>
+                                <a class="beginBtn" href="#"><img src="../images/sub/btn_guide01.jpg" alt="BRABRAGames会員登録" /></a>
+                                <p class="beginImg" style="top:61px; right: 17px;"><img src="../images/sub/img_guide01.jpg" alt="" /></p>
+                            </li>
+                            <li>
+                                <h3 class="hidden">2. ログイン</h3>
+                                <p class="txt">
+                                    会員登録が完了しましたら<br>
+                                    ID・パスワードを入力しログインしてください。<br>
+                                    ログイン後にゲームスターボタンをクリックすると<br>
+                                    ゲームが始まります。<br><br>
+
+                                    <span style="color: #28fff7;">ID・パスワードがわからない場合は下部の<br>
+                                    ボタンより照会してください。</span>
+                                </p>
+                                <a class="beginBtn" href="#"><img src="../images/sub/btn_guide02.jpg" alt="ID・パスワードを お忘れの方はこちら" /></a>
+                                <p class="beginImg" style="top:56px; right: 10px;"><img src="../images/sub/img_guide02.jpg" alt="" /></p>
+                            </li>
+                            <li>
+                                <h3 class="hidden">3. 初期プレイガイド</h3>
+                                <p class="txt">
+                                    ゲームのガイドに沿ってチュートリアルを進めてくだ<br>
+                                    さい。迷った場合は、画面の <span class="yellow">『ミッション』</span>に表示され<br>
+                                    ているクエスト名を押下するとゲームを進行することが<br>
+                                    できます。<br><br>
+
+                                    <span style="color: #d3ad82; font-size: 12px;">機能についてわからない場合は、ゲームガイドを参照して<br>
+                                    みましょう。</span>
+                                </p>
+                                <a class="beginBtn" href="#" style="bottom:17px;"><img src="../images/sub/btn_guide03.jpg" alt="ゲームガイドはこちら" /></a>
+                                <p class="beginImg" style="top:54px; right: 47px;"><img src="../images/sub/img_guide03.jpg" alt="" /></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+
+    </section>
+
+
+    <!--footer-->
+    <footer id="ftWrap">
+        <div class="footer">
+            <div class="ftLogo">
+                <p><img src="../images/common/logo_br.png" alt="BRAEVE"></p>
+                <p><img src="../images/common/logo_dev.png" alt=""></p>
+            </div>
+            <div class="ftInfo">
+                <ul class="clearfix">
+                    <li><a href="#">運営会社</a></li>
+                    <li><a href="#">利用規約</a></li>
+                    <li><a href="#">プライバシーポリシー</a></li>
+                    <li><a href="#">特定商取引法の表記</a></li>
+                </ul>
+                <p class="copy">
+                    Copyright &copy; BRAEVE Co.,Ltd. All Rights Reserved.<br>
+                    Copyright &copy;2017 Yesgame.com. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+</body>
+</html>

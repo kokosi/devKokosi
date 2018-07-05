@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+/*
+  2017-10-13
+  enpgames
+*/
+@import url('../css/common.css');
+
+/*----------main content*/
+#mainWrap{position: relative; width: 1000px; margin: 0 auto;}
+/*-----슬라이드 영역*/
+#mainWrap .slideWrap{position: relative; width: 1000px; height: 358px;}
+#mainWrap .slideWrap .slidePaging{position: absolute; bottom:7px; right:0; z-index: 999;}
+#mainWrap .slideWrap .slidePaging > div{float: left; margin-right:13px; font-size: 15px; letter-spacing: -1px;}
+#mainWrap .slideWrap .slidePaging > div a{display: block; width: 25px; height: 25px; background: url("../images/main/slide_dot.png") no-repeat; color: #fff;  text-align: center; line-height: 25px;}
+/*브라우저 다운로드*/
+#mainWrap .leftContent .brDown{position: relative; height: 220px;}
+
+/*-----중앙 컨텐츠 영역*/
+#mainWrap .middleContent{width: 776px; float: left;}
+#mainWrap .middleContent .mainNotice{position: relative;}
+/*공지 상단 탭*/
+#mainWrap .middleContent .tab{position: relative; width: 776px; height: 49px; background: url("../images/main/bg_mainMenu.jpg") no-repeat;}
+#mainWrap .middleContent .tab ul{position: relative; top:7px; left:7px;}
+#mainWrap .middleContent .tab ul > li{float: left; width: 123px; height: 34px; text-align: center; line-height: 34px; font-size: 19.5px; font-weight: 600;}
+#mainWrap .middleContent .tab ul > li > a{color: #fff;}
+#mainWrap .middleContent .tab ul > li.on{background: url("../images/common/menu_on_S.jpg") no-repeat;}
+#mainWrap .middleContent .tab ul > li.on > a{color: #000;}
+#mainWrap .middleContent .tab .more{position: absolute; top:10px; right: 15px; font-size: 16px;}
+#mainWrap .middleContent .tab .more > a{color:#1be7ff;}
+#mainWrap .middleContent .tab .more > a > span{display: inline-block; width: 14px; height: 14px; line-height: 14px; text-align: center; font-size: 14px; color: #31383a; font-weight: 800; background: #1be7ff; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%;}
+/*공지 리스트*/
+#mainWrap .middleContent .noticeList{position: relative; width: 776px; height: 320px; box-sizing: border-box; border:10px solid #030b16; border-top:0; background: #06162c;}
+#mainWrap .middleContent .noticeList > table{position: relative; left:10px; top:10px; width: 737px; text-align: center; font-size: 18px; color: #fff;}
+#mainWrap .middleContent .noticeList > table tr{border-bottom: 1px solid #fff;}
+#mainWrap .middleContent .noticeList > table tr:last-child{border-bottom: 0;}
+#mainWrap .middleContent .noticeList > table td{padding: 10px 0;}
+#mainWrap .middleContent .noticeList > table .title{text-align: left; padding-left: 10px;}
+#mainWrap .middleContent .noticeList > table .title > a{color: #fff;}
+#mainWrap .middleContent .noticeList > table .title > a:hover{text-decoration: underline;}
+#mainWrap .middleContent .noticeList > table .iconNew{font-size: 14px; color: #ff0000; font-weight: 600;}
+/*하단 미디어 영역*/
+#mainWrap .middleContent .mainMedia{position: relative; padding-top: 3px;}
+#mainWrap .middleContent .mainMedia .conMedia{position: relative; left:3px; width: 277px; height: 215px; box-sizing: border-box; border:1px solid #fff; float: left;}
+#mainWrap .middleContent .mainMedia .conMedia a{color: #fff; font-size: 16px;}
+#mainWrap .middleContent .mainMedia .conMedia .titleMedia{position: absolute; bottom:0; width: 100%; height: 55px; background: rgba(0,0,0,0.5); line-height: 55px; text-align: center;}
+#mainWrap .middleContent .mainMedia .socialMedia{width: 210px; float: left; margin-left: 5px;}

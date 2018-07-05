@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+    <!--수정해야하는 영역-->
+    <meta name="description" content="第一艦隊" />
+    <meta name="author" content="第一艦隊" />
+    <meta name="keywords" content="第一艦隊,第一艦隊" />
+    <title>第一艦隊</title>
+    <!--css-->
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <!--js-->
+    <script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.bxslider.min.js"></script>
+
+    <script type="text/javascript">
+        $(function(){
+            var slider = $('.slider').bxSlider({
+                mode:'fade',
+                speed:500,
+                auto:true,
+                controls:false,
+                pagerCustom: '.slidePaging',
+                onSlideAfter: function() {
+                    slider.stopAuto();
+                    slider.startAuto();
+                }
+            });
+
+            //탭 동작 확인
+            var tab;
+
+            $(document).ready(function(e) {
+                $(".noticeList").hide();
+                $("#list01").show();
+
+                tab=$(".tab > ul > li a");
+                tab.bind("click",onClick);
+            });
+
+            function onClick(){
+                $(this).parent().addClass("on").siblings().removeClass("on");
+                $(".noticeList").hide();
+                $($(this).attr("href")).show();
+                return false;
+            }
+
+
+        });
+    </script>
+
+    <style type="text/css">
+        #server{position: relative; width: 740px; height: 510px; background: url("../images/server/bg_serverSelect.jpg") no-repeat;}
+        .close{position: absolute; right:5px; top:5px;}
+        .serverList{position: relative; width: 710px; top:61px; background: url("../images/server/server_title02.jpg") center 0 no-repeat; padding: 50px 0 0 20px; margin: 0 auto;}
+        .serverList.latest{background: url("../images/server/server_title01.jpg") center 0 no-repeat; margin-bottom: 10px;}
+        .serverList li{position: relative; display: inline-block; width: 159px; height: 48px; background: url("../images/server/server_bg_off.png") no-repeat; margin:0 11px 10px 0; line-height: 48px; text-align: center;}
+        .serverList li a{display:block; width: 159px; height: 48px; color: #eed074; font-size: 12px; font-weight: bold;}
+        .serverList li.on, .serverList li:hover{background: url("../images/server/server_bg_on.png") no-repeat;}
+        .serverList li .se_icon{position: absolute; top:0; left:0;}
+        .paging{margin: 70px 0 0 0;}
+        .paging li > a{color: #ccc; font-size: 12px;}
+        .paging li.on > a{color: #fff;}
+    </style>
+
+</head>
+<body>
+
+<!--pop 740*510-->
+<div id="server">
+
+    <a class="close" href="#"><img src="../images/server/btn_cancel.png" alt="cancel" /></a>
+    <ul class="serverList latest">
+        <li class="on"><a href="#">01 サーバー名</a></li>
+        <li><a href="#">02 サーバー名</a></li>
+        <li><a href="#">03 サーバー名</a></li>
+        <li><a href="#">04 サーバー名</a></li>
+    </ul>
+
+    <ul class="serverList">
+        <li><span class="se_icon new"><img src="../images/server/icon_new.png" alt="new" /></span><a href="#">01 サーバー名</a></li>
+        <li><span class="se_icon hot"><img src="../images/server/icon_hot.png" alt="hot" /></span><a href="#">02 サーバー名</a></li>
+        <li><a href="#">03 ああああああああああ</a></li>
+        <li><a href="#">04 サーバー名</a></li>
+        <li><a href="#">01 サーバー名</a></li>
+        <li><a href="#">02 サーバー名</a></li>
+        <li><a href="#">03 サーバー名</a></li>
+        <li><a href="#">04 サーバー名</a></li>
+        <li><a href="#">01 サーバー名</a></li>
+        <li><a href="#">02 サーバー名</a></li>
+        <li><a href="#">03 サーバー名</a></li>
+        <li><a href="#">04 サーバー名</a></li>
+        <li><a href="#">01 サーバー名</a></li>
+        <li><a href="#">02 サーバー名</a></li>
+        <li><a href="#">03 サーバー名</a></li>
+        <li><a href="#">04 サーバー名</a></li>
+    </ul>
+
+    <!--paging-->
+    <ul class="paging" style="margin: 70px 0 0 0;">
+        <li class="pagingBtn"><a href="#"><img src="../images/common/btn_first.png" alt="page first"></a></li>
+        <li class="pagingBtn"><a href="#"><img src="../images/common/btn_prev.png" alt="page prev"></a></li>
+        <li class="on"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">6</a></li>
+        <li class="pagingBtn"><a href="#"><img src="../images/common/btn_next.png" alt="page next"></a></li>
+        <li class="pagingBtn"><a href="#"><img src="../images/common/btn_end.png" alt="page end"></a></li>
+    </ul>
+
+</div>
+
+</body>
+</html>
