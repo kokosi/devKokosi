@@ -1,0 +1,165 @@
+/*
+  2017-10-17
+  enpgames
+*/
+/*reset*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, input, select, textarea, button, section {
+  margin: 0;
+  padding: 0; }
+
+html {
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%; }
+
+p {
+  word-wrap: break-word; }
+
+li {
+  list-style-type: none; }
+
+table {
+  border-collapse: collapse; }
+
+img, fieldset, iframe {
+  border: 0; }
+
+img {
+  border: none;
+  vertical-align: top; }
+
+input {
+  vertical-align: middle;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+input, select, textarea, button {
+  vertical-align: middle; }
+
+button {
+  border: 0 none;
+  background-color: transparent;
+  cursor: pointer; }
+
+a {
+  text-decoration: none;
+  color: #666; }
+
+em {
+  font-style: normal; }
+
+textarea:focus, input:focus {
+  outline: 0; }
+
+article, aside, canvas, details, embed, figcaption, figure, footer, header, menu, nav, section, summary, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr {
+  display: block; }
+
+body, code {
+  color: #666;
+  font: 13px/1.25 "Meiryo", Meiryo, sans-serif;
+  background: #fff; }
+
+input, select, textarea {
+  color: #333;
+  font-size: 13px;
+  line-height: 1em;
+  font-family: "Meiryo", Meiryo, sans-serif; }
+
+.hidden {
+  font: 0px/0 a;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  visibility: hidden;
+  width: 0;
+  text-indent: -99999px; }
+
+.hide {
+  display: none !important; }
+
+.clear {
+  clear: both; }
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+#wrap {
+  position: relative;
+  width: 100%;
+  height: 1067px;
+  background: #fff url("../images/bg_main.jpg") center 0 no-repeat; }
+  #wrap img {
+    max-width: 100%; }
+  #wrap .quickBtn {
+    position: fixed;
+    right: 0;
+    top: 417px; }
+    #wrap .quickBtn li {
+      margin-bottom: 6px; }
+
+#mainWrap {
+  position: relative;
+  width: 1248px;
+  height: 1067px;
+  margin: 0 auto;
+  background: #fff url("../images/bg_center.jpg") center 0 no-repeat; }
+  #mainWrap .char {
+    position: absolute;
+    left: -336px;
+    top: 0;
+    z-index: 999; }
+  #mainWrap .gnb {
+    position: relative;
+    width: 100%;
+    height: 34px;
+    margin: 0 auto; }
+    #mainWrap .gnb .goHome {
+      position: absolute;
+      right: 0;
+      display: block;
+      width: 226px;
+      height: 34px;
+      text-indent: -99999px; }
+  #mainWrap .content {
+    position: relative;
+    width: 100%;
+    margin: 0 auto; }
+    #mainWrap .content h2.title {
+      width: 420px;
+      height: 122px;
+      margin-top: 304px;
+      margin-left: 401px; }
+    #mainWrap .content .videoWrap {
+      width: 798px;
+      height: 449px;
+      margin-top: -40px;
+      margin-left: 225px; }
+    #mainWrap .content .skill {
+      position: absolute;
+      right: 0;
+      top: 81px;
+      width: 224px;
+      height: 366px; }
+      #mainWrap .content .skill dd {
+        float: left;
+        width: 112px;
+        height: 134px;
+        margin-top: 49px; }
+        #mainWrap .content .skill dd a {
+          display: block;
+          width: 112px;
+          height: 134px;
+          text-indent: -99999px; }
+    #mainWrap .content .goUpdate {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: block;
+      width: 224px;
+      height: 56px;
+      text-indent: -99999px; }
+
+/*# sourceMappingURL=main.css.map */

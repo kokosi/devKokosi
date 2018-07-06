@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+    <!--수정해야하는 영역-->
+    <meta name="description" content="드래곤 네스트 10월 업데이트 - 렌시아 각성" />
+    <meta name="author" content="드래곤 네스트" />
+    <meta name="keywords" content="드래곤네스트, 드래곤네스트" />
+    <title>드래곤 네스트 - 10월 업데이트</title>
+    <!--css-->
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <!--js-->
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+           //탭 동작 확인
+            var tab;
+
+            $(document).ready(function(e) {
+                $(".videoWrap").hide();
+                $("#video01").show();
+
+                tab=$(".skillName > a");
+                tab.bind("click",onClick);
+            });
+
+            function onClick(){
+                $(this).parent().addClass("on").siblings().removeClass("on");
+                $(".videoWrap").hide();
+                $($(this).attr("href")).show();
+                return false;
+            }
+
+
+        });
+    </script>
+
+</head>
+<body>
+
+<div id="wrap">
+
+    <section id="mainWrap">
+        <div class="char">
+            <img src="images/character.png" alt="렌시아 캐릭터" />
+        </div>
+        <div class="gnb">
+            <a class="goHome" href="#">드네홈 바로가기</a>
+        </div>
+        <div class="content">
+            <h1 class="hidden">2017년 10월 업데이트 - 렌시아 각성</h1>
+
+            <!--video-->
+            <h2 class="title"><img src="images/video_title.png" alt="렌시아 신규스킬"></h2>
+            <div class="videoWrap" id="video01">
+                비디오영역 체크 1번
+            </div>
+            <div class="videoWrap" id="video02">
+                비디오영역 체크 2번
+            </div>
+            <div class="videoWrap" id="video03">
+                비디오영역 체크 3번
+            </div>
+            <div class="videoWrap" id="video04">
+                비디오영역 체크 4번
+            </div>
+
+            <h2 class="hidden">신규 스킬</h2>
+            <dl class="skill">
+                <dt class="hidden">플러리</dt>
+                <dd class="skillName"><a href="#video01">이블퍼니셔</a></dd>
+                <dd class="skillName"><a href="#video02">비프로스트</a></dd>
+                <dt class="hidden">스팅브리저</dt>
+                <dd class="skillName"><a href="#video03">플래그 사인</a></dd>
+                <dd class="skillName"><a href="#video04">엔젤릭 스피어</a></dd>
+            </dl>
+            <p class="btn">
+                <a class="goUpdate" href="#">업데이트 보러가기</a>
+            </p>
+        </div>
+    </section>
+
+    <!--quick banner-->
+    <ul class="quickBtn">
+        <li><a href="#"><img src="images/btn_quick01.png" alt="렌시아 각성 및 육성타이밍" /></a></li>
+        <li><a href="#"><img src="images/btn_quick02.png" alt="할로윈 이벤트" /></a></li>
+        <li><a href="#"><img src="images/btn_quick03.png" alt="HIDDEN EVENT" /></a></li>
+    </ul>
+
+    <footer class="hidden"><p>COPYRIGHT(c) EYEDENTITYGAMES CO. Ltd., ALL RIGHTS RESERVED.</p></footer>
+</div>
+
+</body>
+</html>
