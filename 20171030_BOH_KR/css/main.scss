@@ -1,0 +1,134 @@
+/*
+  2017-10-30
+  enpgames
+*/
+
+@import "common.css";
+
+//default
+$marAuto:0 auto;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+@mixin boxSize($width:null, $height:null){
+  width: $width;
+  height: $height;
+}
+
+
+//--------------------START--------------------//
+
+//main fix
+#mainWrap{
+  //contents!
+  .contentWrap{
+    height: 493px;
+    margin-top: 39px;
+    background: url("../images/main/bg_mainCon.jpg") no-repeat;
+    z-index: 99;
+    position: relative;
+    padding:37px 0 37px 47px;
+    box-sizing: border-box;
+    > div{
+      float: left;
+    }
+    //more btn
+    .more{
+      position: absolute;
+      top:4px; right: 0;
+      display: block;
+      @include boxSize(54px, 19px);
+      border: 1px solid #8d8d8d;
+      color: #8d8d8d;
+      text-align: center;
+      line-height: 19px;
+    }
+    //main page notice
+    .mainNoti{
+      position: relative;
+      @include boxSize(296px, 145px);
+      ul {
+        margin-top: 20px;
+        li{
+          background: url('../images/common/s_dot.jpg') 0 center no-repeat;
+          padding-left: 10px;
+          margin-bottom: 1px;
+          letter-spacing:-1px;
+          .date {
+            float: right;
+            font-size: 12px;
+            color: #7a7a7a;
+          }
+          a {
+            font-size: 14px;
+            color: #fff;
+            &:hover {
+              color: #f1cd5e;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+    //main page game info
+    .mainInfo{
+      height: 145px;
+      margin-left: 25px;
+      img{
+        margin-top: -29px;
+      }
+    }
+    //main purchase
+    .mainCash {
+      margin-left: 16px;
+      img {
+        margin-top: -5px;
+      }
+    }
+    //main video
+    .mainVideo{
+      @include boxSize(296px, 180px);
+      margin-top: 30px;
+      a{
+        display: block;
+        @include boxSize(292px, 136px);
+        border: 2px solid #3c3c3c;
+        margin-top: 13px;
+      }
+    }
+    //main page img board
+    .mainImg{
+      position: relative;
+      @include boxSize(373px, 180px);
+      margin: 30px 0 0 25px;
+      .img{
+        display: inline-block;
+        @include boxSize(181px, 136px);
+        border: 2px solid #3c3c3c;
+        margin-top: 13px;
+        &:last-child{
+          position: absolute;
+          bottom: 0; right: 0;
+        }
+      }
+    }
+    //main page qna
+    .mainQna{
+      float: left;
+      @include boxSize(187px, 180px);
+      margin: 30px 0 0 25px;
+      background: url("../images/common/btn_main_btnSet.jpg") no-repeat;
+      li{
+        a{
+          display: block;
+          height: 60px;
+          text-indent: -99999px;
+        }
+      }
+    }
+  }
+}

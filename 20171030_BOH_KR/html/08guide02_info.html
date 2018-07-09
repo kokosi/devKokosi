@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+    <!--수정해야하는 영역-->
+    <meta name="description" content="THE함대:1941" />
+    <meta name="author" content="THE함대:1941" />
+    <meta name="keywords" content="THE함대:1941, THE함대:1941" />
+    <title>THE함대:1941</title>
+    <!--css-->
+    <link rel="stylesheet" type="text/css" href="../css/sub.css" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery.bxslider.css" />
+    <!--js-->
+    <script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.bxslider.min.js"></script>
+
+    <script type="text/javascript">
+
+        $(function(){
+            var slider = $('.slider').bxSlider({
+                mode:'fade',
+                speed:500,
+                auto:true,
+                controls:false,
+                pagerCustom: '.slidePaging',
+                onSlideAfter: function() {
+                    slider.stopAuto();
+                    slider.startAuto();
+                }
+            });
+
+            //nav check
+            $('.navList > li').mouseover(function () {
+                $('.subMenu').show();
+            });
+            $('.subMenu').mouseleave(function () {
+                $('.subMenu').hide();
+            });
+
+            //탭 동작 확인
+            var tab;
+
+            $(document).ready(function(e) {
+                $(".infoImg").hide();
+                $("#info01").show();
+
+                tab=$(".guideTab > ul > li a");
+                tab.bind("click",onClick);
+            });
+
+            function onClick(){
+                $(this).parent().addClass("on").siblings().removeClass("on");
+                $(".infoImg").hide();
+                $($(this).attr("href")).show();
+                return false;
+            }
+        });
+    </script>
+
+</head>
+<body>
+
+<!-- gnb 영역-->
+<div style="width:100%;height:40px;"></div>
+
+<div id="wrap">
+
+    <!--header & nav-->
+    <header id="hdWrap">
+        <nav class="navWrap">
+            <h1 class="logo"><a href="#"><img src="../images/common/logo.png" alt="제1함대"></a></h1>
+            <ul class="navList">
+                <li><a href="#">게임소식</a></li>
+                <li><a href="#">게임정보</a></li>
+                <li><a href="#">커뮤니티</a></li>
+                <li><a href="#">상점</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+        </nav>
+        <div class="subMenu">
+            <ul class="subMenuList">
+                <li>
+                    <ul class="menu m01">
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">GM노트</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="menu m02">
+                        <li><a href="#">게임소개</a></li>
+                        <li><a href="#">게임특징</a></li>
+                        <li><a href="#">초보자가이드</a></li>
+                        <li><a href="#">게임 가이드</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="menu m03">
+                        <li><a href="#">자유게시판</a></li>
+                        <li><a href="#">이미지게시판</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="menu m04">
+                        <li><a href="#">구매 및 선물</a></li>
+                        <li><a href="#">구매내역</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="menu m05">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">문의하기</a></li>
+                        <li><a href="#">약관 및 정책</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="mainWrap">
+        <!--fixWrap-->
+        <div class="fixWrap">
+            <!--slideWrap-->
+            <div class="slideWrap">
+                <h2 class="hidden">Slide Visual</h2>
+                <ul class="slider">
+                    <li><a href="#"><img src="../images/common/temp_banner.png" alt="slide temp img" /></a></li>
+                    <li><a href="#"><img src="../images/common/temp_banner.png" alt="slide temp img" /></a></li>
+                    <li><a href="#"><img src="../images/common/temp_banner.png" alt="slide temp img" /></a></li>
+                    <li><a href="#"><img src="../images/common/temp_banner.png" alt="slide temp img" /></a></li>
+                    <li><a href="#"><img src="../images/common/temp_banner.png" alt="slide temp img" /></a></li>
+                </ul>
+                <div class="slidePaging">
+                    <div><a data-slide-index="0" href=""></a></div>
+                    <div><a data-slide-index="1" href=""></a></div>
+                    <div><a data-slide-index="2" href=""></a></div>
+                    <div><a data-slide-index="3" href=""></a></div>
+                    <div><a data-slide-index="4" href=""></a></div>
+                </div>
+            </div>
+            <!--game start-->
+            <div class="gameStart">
+                <h2 class="hidden">Game Start</h2>
+                <a href="#">GAME START-게임시작</a>
+            </div>
+            <!--before login-->
+            <!--<div class="Blogin infoBox">
+                <h2 class="hidden">Login area</h2>
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend></legend>
+                        <div class="loginInput">
+                            <input type="text" class="id" placeholder="아이디 입력" />
+                            <input type="password" class="pwd" placeholder="비밀번호 입력" />
+                        </div>
+                        <p class="loginBtn"><input type="image" src="../images/common/btn_login.png" alt="login"/></p>
+                    </fieldset>
+                </form>
+                <div class="joinFind">
+                    <a class="join" href="#">회원가입</a>
+                    <a class="find" href="#">아이디/비밀번호찾기</a>
+                </div>
+            </div>-->
+            <!--after login-->
+            <div class="Alogin infoBox">
+                <div class="myInfo">
+                    <p><strong>테스터</strong> 님 환영합니다.</p>
+                    <p>최근접속서버 : <strong>1서버</strong></p>
+                    <p>보유캐시 : <strong>0캐시</strong> <a href="#"><img src="../images/common/btn_charge.png" alt="충전" /></a></p>
+                </div>
+                <div class="myBtn">
+                    <a href="#"><img src="../images/common/btn_mypage.png" alt="마이페이지" /></a>
+                    <a href="#"><img src="../images/common/btn_logout.png" alt="로그아웃" /></a>
+                </div>
+            </div>
+        </div>
+
+        <!--contentWrap-->
+        <div class="contentWrap subWrap">
+            <div class="subContent">
+
+                <!--top fix-->
+                <h2 class="subTitle"><img src="../images/sub/sub_title05.png" alt="게임특징-THE함대:1941만의 특징 시스템을 소개합니다." /></h2>
+                <div class="subNavigation">홈 > 게임정보 > <span>게임특징</span></div>
+
+                <!--right fix-->
+                <div class="subRight_fix">
+                    <!--sub menu-->
+                    <h3 class="hidden">게임소개 메뉴 리스트</h3>
+                    <ul class="subRight_Menu introduce">
+                        <li><a href="#">게임소개</a></li>
+                        <li class="on"><a href="#">게임특징</a></li>
+                        <li><a href="#">초보자 가이드</a></li>
+                        <li><a href="#">게임 가이드</a></li>
+                    </ul>
+                    <!--purchase-->
+                    <h3 class="hidden">금화구매/선물하기</h3>
+                    <p class="subRight_purchase">
+                        <a href="#"><img src="../images/common/btn_purchase.png" alt="금화구매/선물하기" /></a>
+                    </p>
+                    <!--help-->
+                    <h3 class="hidden">가이드 및 문의하기</h3>
+                    <ul class="subRight_qna clearfix">
+                        <li><a href="#">게임이 처음이신가요? - 초보자 가이드</a></li>
+                        <li><a href="#">불편하신 점이 있다면 - 1:1 문의하기</a></li>
+                        <li><a href="#">무엇이 궁금하신가요? - 자주하는 질문</a></li>
+                    </ul>
+                </div>
+
+                <!--view wrap-->
+                <div class="subCommonWrap guideWrap">
+                    <!--tab menu-->
+                    <div class="guideTab">
+                        <ul>
+                            <li class="on"><a href="#info01">전함</a></li>
+                            <li><a href="#info02">함장</a></li>
+                            <li><a href="#info03">해전</a></li>
+                        </ul>
+                    </div>
+                    <!--tab contents01-->
+                    <div class="infoImg" id="info01">
+                        <h3 class="hidden">전함</h3>
+                        <img src="../images/sub/img_gameInfo01.jpg" alt="전함" />
+                        <p class="hidden">
+                            강력한 전함!<br>
+                            승리를 향한 첫 걸음!<br>
+                            조선소에서 전함을 건조해 보세요!
+                        </p>
+                    </div>
+                    <!--tab contents02-->
+                    <div class="infoImg" id="info02">
+                        <h3 class="hidden">함장</h3>
+                        <img src="../images/sub/img_gameInfo02.jpg" alt="함정" />
+                        <p class="hidden">
+                            뛰어난 함장!<br>
+                            승리를 위한 전진!<br>
+                            해전에서 함장을 영입하여 강력한 함대를 만들어 보세요!
+                        </p>
+                    </div>
+                    <!--tab contents03-->
+                    <div class="infoImg" id="info03">
+                        <h3 class="hidden">해전</h3>
+                        <img src="../images/sub/img_gameInfo03.jpg" alt="해전" />
+                        <p class="hidden">
+                            치열한 바다 한가운데<br>
+                            펼펴지는 진정한 전투!<br>
+                            뛰어난 함장과 강력한 전함으로 해전의 역사를 바꿔 보세요!
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!--common footer-->
+            <div class="commonFt">
+                <a class="down ie" href="#">Internet Explorer 다운로드</a>
+                <a class="down fp" href="#">Adobe Flash Player 다운로드</a>
+                <ul class="faq">
+                    <li><a href="#">FAQ</a></li>
+                    <li class="line">|</li>
+                    <li><a href="#">문의하기</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <!--footer-->
+    <footer id="ftWrap">
+        <div class="footer">
+            <p class="ftlogo"><a href="#"><img src="../images/common/logo_company.png" alt="포빌리티" /></a></p>
+            <div class="ftLeft">
+                <ul class="links">
+                    <li><a href="#">회사소개</a></li>
+                    <li>/</li>
+                    <li><a href="#">이용약관</a></li>
+                    <li>/</li>
+                    <li><a href="#"><span>개인정보처리방침</span></a></li>
+                    <li>/</li>
+                    <li><a href="#">청소년보호정책</a></li>
+                    <li>/</li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+                <p class="copy">
+                    ㈜포빌리티 | 대표이사 김미연 | 서울특별시 구로구 디지털로 29길 38, 402호<br>
+                    고객센터 1644-0502 | 팩스 02-6092-1168 | 이메일 <a href="mailto:ssen_cs@pobility.com">ssen_cs@pobility.com</a><br>
+                    사업자 등록번호 495-81-00186 | 통신판매업 신고번호 제 2015-서울구로-1463호<br>
+                    COPYRIGHT©POBILITY., All rights reserved.
+                </p>
+                <p class="grade">
+                    <img src="../images/common/temp_info.png" alt="" />
+                    <img src="../images/common/grade.png" alt="" />
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+</body>
+</html>

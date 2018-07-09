@@ -1,0 +1,508 @@
+@charset "UTF-8";
+/*
+  2017-10-30
+  enpgames
+*/
+/*reset*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, input, select, textarea, button, section {
+  margin: 0;
+  padding: 0; }
+
+html {
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%; }
+
+p {
+  word-wrap: break-word; }
+
+li {
+  list-style-type: none; }
+
+table {
+  border-collapse: collapse; }
+
+img, fieldset, iframe {
+  border: 0; }
+
+img {
+  border: none;
+  vertical-align: top; }
+
+input {
+  vertical-align: middle;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+input, select, textarea, button {
+  vertical-align: middle; }
+
+button {
+  border: 0 none;
+  background-color: transparent;
+  cursor: pointer; }
+
+a {
+  text-decoration: none;
+  color: #666; }
+
+em {
+  font-style: normal; }
+
+textarea:focus, input:focus {
+  outline: 0; }
+
+article, aside, canvas, details, embed, figcaption, figure, footer, header, menu, nav, section, summary, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr {
+  display: block; }
+
+body, code {
+  color: #666;
+  font: 13px/1.25 맑은 고딕, 'Malgun Gothic', sans-serif;
+  background: #fff; }
+
+input, select, textarea {
+  color: #333;
+  font-size: 13px;
+  line-height: 1em;
+  font-family: 맑은 고딕, 'NanumGothic', 'Malgun Gothic', sans-serif; }
+
+.hidden {
+  font: 0px/0 a;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  visibility: hidden;
+  width: 0;
+  text-indent: -99999px; }
+
+.hide {
+  display: none !important; }
+
+.clear {
+  clear: both; }
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+#wrap {
+  position: relative;
+  width: 100%;
+  background: #133f47 url("../images/main/bg_main.jpg") center 0 no-repeat;
+  padding-top: 47px; }
+  #wrap img {
+    max-width: 100%; }
+
+#hdWrap {
+  position: relative;
+  width: 100%;
+  height: 97px;
+  z-index: 9999; }
+  #hdWrap .navWrap {
+    width: 1000px;
+    height: 97px;
+    margin: 0 auto; }
+    #hdWrap .navWrap .logo {
+      position: absolute;
+      top: -38px; }
+    #hdWrap .navWrap .navList {
+      position: relative;
+      top: 35px;
+      left: 334px; }
+      #hdWrap .navWrap .navList li {
+        display: inline-block;
+        width: 100px;
+        height: 30px;
+        background-image: url("../images/common/nav_menu_off.png");
+        margin-right: 42px; }
+        #hdWrap .navWrap .navList li a {
+          display: block;
+          width: 100px;
+          height: 30px;
+          text-indent: -99999px; }
+        #hdWrap .navWrap .navList li:hover, #hdWrap .navWrap .navList li.on {
+          background-image: url("../images/common/nav_menu_on.png"); }
+        #hdWrap .navWrap .navList li:nth-child(1) {
+          background-position: 0 0; }
+        #hdWrap .navWrap .navList li:nth-child(2) {
+          background-position: -147px 0; }
+        #hdWrap .navWrap .navList li:nth-child(3) {
+          background-position: -294px 0;
+          margin-right: 25px; }
+        #hdWrap .navWrap .navList li:nth-child(4) {
+          background-position: -423px 0;
+          margin-right: 26px; }
+        #hdWrap .navWrap .navList li:nth-child(5) {
+          background-position: -554px 0;
+          margin-right: 0; }
+      #hdWrap .navWrap .navList li:hover .subMenu {
+        display: block; }
+  #hdWrap .subMenu {
+    display: none;
+    width: 100%;
+    height: 172px;
+    background: url("../images/common/sub_menu_off.png") center 0 no-repeat; }
+    #hdWrap .subMenu .subMenuList {
+      width: 1000px;
+      height: 172px;
+      margin: 0 auto;
+      position: relative;
+      left: 334px; }
+      #hdWrap .subMenu .subMenuList > li {
+        display: inline-block;
+        font-size: 16px; }
+        #hdWrap .subMenu .subMenuList > li .menu {
+          width: 100px;
+          height: 139px;
+          position: absolute;
+          top: 0;
+          text-align: center;
+          padding-top: 15px; }
+          #hdWrap .subMenu .subMenuList > li .menu > li {
+            margin-bottom: 8px;
+            width: 100px;
+            height: 25px; }
+            #hdWrap .subMenu .subMenuList > li .menu > li a {
+              display: block;
+              width: 100px;
+              height: 25px;
+              text-indent: -99999px; }
+          #hdWrap .subMenu .subMenuList > li .menu.m01 li {
+            background: url("../images/common/subMenu01_off.png") no-repeat; }
+            #hdWrap .subMenu .subMenuList > li .menu.m01 li:hover, #hdWrap .subMenu .subMenuList > li .menu.m01 li.on {
+              background-image: url("../images/common/subMenu01_on.png"); }
+            #hdWrap .subMenu .subMenuList > li .menu.m01 li:nth-child(1) {
+              background-position: 0 -14px; }
+              #hdWrap .subMenu .subMenuList > li .menu.m01 li:nth-child(1):hover, #hdWrap .subMenu .subMenuList > li .menu.m01 li:nth-child(1).on {
+                background-position: 0 -15px; }
+            #hdWrap .subMenu .subMenuList > li .menu.m01 li:nth-child(2) {
+              background-position: 0 -45px; }
+              #hdWrap .subMenu .subMenuList > li .menu.m01 li:nth-child(2):hover, #hdWrap .subMenu .subMenuList > li .menu.m01 li:nth-child(2).on {
+                background-position: 0 -46px; }
+            #hdWrap .subMenu .subMenuList > li .menu.m01 li:nth-child(3) {
+              background-position: 0 -74px; }
+              #hdWrap .subMenu .subMenuList > li .menu.m01 li:nth-child(3):hover, #hdWrap .subMenu .subMenuList > li .menu.m01 li:nth-child(3).on {
+                background-position: 0 -75px; }
+          #hdWrap .subMenu .subMenuList > li .menu.m02 {
+            left: 146px; }
+            #hdWrap .subMenu .subMenuList > li .menu.m02 li {
+              background-image: url("../images/common/subMenu02_off.png"); }
+              #hdWrap .subMenu .subMenuList > li .menu.m02 li:hover, #hdWrap .subMenu .subMenuList > li .menu.m02 li.on {
+                background-image: url("../images/common/subMenu02_on.png"); }
+              #hdWrap .subMenu .subMenuList > li .menu.m02 li:nth-child(1) {
+                background-position: 0 -14px; }
+                #hdWrap .subMenu .subMenuList > li .menu.m02 li:nth-child(1):hover, #hdWrap .subMenu .subMenuList > li .menu.m02 li:nth-child(1).on {
+                  background-position: 0 -15px; }
+              #hdWrap .subMenu .subMenuList > li .menu.m02 li:nth-child(2) {
+                background-position: 0 -45px; }
+                #hdWrap .subMenu .subMenuList > li .menu.m02 li:nth-child(2):hover, #hdWrap .subMenu .subMenuList > li .menu.m02 li:nth-child(2).on {
+                  background-position: 0 -46px; }
+              #hdWrap .subMenu .subMenuList > li .menu.m02 li:nth-child(3) {
+                background-position: 0 -74px; }
+                #hdWrap .subMenu .subMenuList > li .menu.m02 li:nth-child(3):hover, #hdWrap .subMenu .subMenuList > li .menu.m02 li:nth-child(3).on {
+                  background-position: 0 -75px; }
+              #hdWrap .subMenu .subMenuList > li .menu.m02 li:nth-child(4) {
+                background-position: 0 -103px; }
+                #hdWrap .subMenu .subMenuList > li .menu.m02 li:nth-child(4):hover, #hdWrap .subMenu .subMenuList > li .menu.m02 li:nth-child(4).on {
+                  background-position: 0 -104px; }
+          #hdWrap .subMenu .subMenuList > li .menu.m03 {
+            left: 293px; }
+            #hdWrap .subMenu .subMenuList > li .menu.m03 li {
+              background-image: url("../images/common/subMenu03_off.png"); }
+              #hdWrap .subMenu .subMenuList > li .menu.m03 li:hover, #hdWrap .subMenu .subMenuList > li .menu.m03 li.on {
+                background-image: url("../images/common/subMenu03_on.png"); }
+              #hdWrap .subMenu .subMenuList > li .menu.m03 li:nth-child(1) {
+                background-position: 0 -14px; }
+                #hdWrap .subMenu .subMenuList > li .menu.m03 li:nth-child(1):hover, #hdWrap .subMenu .subMenuList > li .menu.m03 li:nth-child(1).on {
+                  background-position: 0 -15px; }
+              #hdWrap .subMenu .subMenuList > li .menu.m03 li:nth-child(2) {
+                background-position: 0 -45px; }
+                #hdWrap .subMenu .subMenuList > li .menu.m03 li:nth-child(2):hover, #hdWrap .subMenu .subMenuList > li .menu.m03 li:nth-child(2).on {
+                  background-position: 0 -46px; }
+          #hdWrap .subMenu .subMenuList > li .menu.m04 {
+            left: 426px; }
+            #hdWrap .subMenu .subMenuList > li .menu.m04 li {
+              background-image: url("../images/common/subMenu04_off.png"); }
+              #hdWrap .subMenu .subMenuList > li .menu.m04 li:hover, #hdWrap .subMenu .subMenuList > li .menu.m04 li.on {
+                background-image: url("../images/common/subMenu04_on.png"); }
+              #hdWrap .subMenu .subMenuList > li .menu.m04 li:nth-child(1) {
+                background-position: 0 -14px; }
+                #hdWrap .subMenu .subMenuList > li .menu.m04 li:nth-child(1):hover, #hdWrap .subMenu .subMenuList > li .menu.m04 li:nth-child(1).on {
+                  background-position: 0 -15px; }
+              #hdWrap .subMenu .subMenuList > li .menu.m04 li:nth-child(2) {
+                background-position: 0 -45px; }
+                #hdWrap .subMenu .subMenuList > li .menu.m04 li:nth-child(2):hover, #hdWrap .subMenu .subMenuList > li .menu.m04 li:nth-child(2).on {
+                  background-position: 0 -46px; }
+          #hdWrap .subMenu .subMenuList > li .menu.m05 {
+            left: 553px; }
+            #hdWrap .subMenu .subMenuList > li .menu.m05 li {
+              background-image: url("../images/common/subMenu05_off.png"); }
+              #hdWrap .subMenu .subMenuList > li .menu.m05 li:hover, #hdWrap .subMenu .subMenuList > li .menu.m05 li.on {
+                background-image: url("../images/common/subMenu05_on.png"); }
+              #hdWrap .subMenu .subMenuList > li .menu.m05 li:nth-child(1) {
+                background-position: 0 -14px; }
+                #hdWrap .subMenu .subMenuList > li .menu.m05 li:nth-child(1):hover, #hdWrap .subMenu .subMenuList > li .menu.m05 li:nth-child(1).on {
+                  background-position: 0 -15px; }
+              #hdWrap .subMenu .subMenuList > li .menu.m05 li:nth-child(2) {
+                background-position: 0 -45px; }
+                #hdWrap .subMenu .subMenuList > li .menu.m05 li:nth-child(2):hover, #hdWrap .subMenu .subMenuList > li .menu.m05 li:nth-child(2).on {
+                  background-position: 0 -46px; }
+              #hdWrap .subMenu .subMenuList > li .menu.m05 li:nth-child(3) {
+                background-position: 0 -74px; }
+                #hdWrap .subMenu .subMenuList > li .menu.m05 li:nth-child(3):hover, #hdWrap .subMenu .subMenuList > li .menu.m05 li:nth-child(3).on {
+                  background-position: 0 -75px; }
+
+#mainWrap {
+  position: relative;
+  width: 1000px;
+  margin: 0 auto; }
+  #mainWrap .fixWrap {
+    position: relative;
+    height: 374px; }
+    #mainWrap .fixWrap .slideWrap {
+      position: relative;
+      width: 1000px;
+      height: 304px; }
+      #mainWrap .fixWrap .slideWrap .slidePaging {
+        position: absolute;
+        bottom: 17px;
+        left: 15px;
+        z-index: 999; }
+        #mainWrap .fixWrap .slideWrap .slidePaging div {
+          float: left;
+          margin-left: 5px; }
+          #mainWrap .fixWrap .slideWrap .slidePaging div a {
+            display: block;
+            width: 25px;
+            height: 25px;
+            background: url("../images/common/dot_off.png") no-repeat; }
+            #mainWrap .fixWrap .slideWrap .slidePaging div a.active {
+              background: url("../images/common/dot_on.png") no-repeat; }
+    #mainWrap .fixWrap .gameStart {
+      position: absolute;
+      bottom: 70px;
+      right: 12px;
+      width: 313px;
+      height: 165px;
+      z-index: 999; }
+      #mainWrap .fixWrap .gameStart a {
+        display: block;
+        width: 313px;
+        height: 165px;
+        background: url("../images/common/btn_gameStart_off.png") no-repeat;
+        text-indent: -99999px; }
+        #mainWrap .fixWrap .gameStart a:hover {
+          background: url("../images/common/btn_gameStart_on.png") no-repeat; }
+    #mainWrap .fixWrap .infoBox {
+      height: 70px;
+      padding-top: 17px; }
+      #mainWrap .fixWrap .infoBox.Blogin .loginInput {
+        float: left;
+        margin: 0 5px 0 20px; }
+        #mainWrap .fixWrap .infoBox.Blogin .loginInput input {
+          width: 145px;
+          height: 34px;
+          background: #131d1e;
+          border: 1px solid #0d4146;
+          color: #78bac1;
+          padding-left: 10px; }
+      #mainWrap .fixWrap .infoBox.Blogin .joinFind {
+        position: absolute;
+        bottom: 16px;
+        right: 20px;
+        width: 293px;
+        height: 37px;
+        background: url("../images/common/btn_find.png") no-repeat; }
+        #mainWrap .fixWrap .infoBox.Blogin .joinFind a {
+          display: inline-block;
+          text-indent: -99999px;
+          height: 17px;
+          margin-top: 10px; }
+          #mainWrap .fixWrap .infoBox.Blogin .joinFind a.join {
+            width: 62px;
+            margin-left: 45px; }
+          #mainWrap .fixWrap .infoBox.Blogin .joinFind a.find {
+            width: 137px; }
+      #mainWrap .fixWrap .infoBox.Alogin .myInfo {
+        box-sizing: border-box;
+        display: inline-block;
+        height: 37px;
+        color: #fff;
+        padding: 9px 0 0 20px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        border-radius: 5px;
+        border: 1px solid #343434;
+        background: #131316;
+        box-shadow: 1px 1px 10px 1px #000 inset; }
+        #mainWrap .fixWrap .infoBox.Alogin .myInfo p {
+          float: left;
+          background: url("../images/common/s_dot.jpg") 0 center no-repeat;
+          padding-left: 10px;
+          margin-right: 20px; }
+          #mainWrap .fixWrap .infoBox.Alogin .myInfo p strong {
+            color: #ea323c;
+            font-size: 14px; }
+          #mainWrap .fixWrap .infoBox.Alogin .myInfo p:first-child {
+            color: #787878; }
+      #mainWrap .fixWrap .infoBox.Alogin .myBtn {
+        width: 274px;
+        position: absolute;
+        bottom: 17px;
+        right: 30px; }
+        #mainWrap .fixWrap .infoBox.Alogin .myBtn a {
+          float: left; }
+          #mainWrap .fixWrap .infoBox.Alogin .myBtn a:first-child {
+            margin-right: 2px; }
+  #mainWrap .contentWrap {
+    margin-top: 39px;
+    z-index: 99;
+    position: relative;
+    padding: 37px 0 37px 47px;
+    box-sizing: border-box; }
+    #mainWrap .contentWrap .commonFt {
+      width: 905px;
+      height: 40px;
+      background: #202020;
+      margin-top: 28px;
+      padding: 13px 20px;
+      box-sizing: border-box; }
+      #mainWrap .contentWrap .commonFt .down {
+        color: #b4b4b4;
+        font-size: 12px;
+        padding-left: 20px; }
+        #mainWrap .contentWrap .commonFt .down.ie {
+          background: url("../images/common/icon_Explorer.png") 0 center no-repeat;
+          margin-right: 20px; }
+        #mainWrap .contentWrap .commonFt .down.fp {
+          background: url("../images/common/icon_flash.png") 0 center no-repeat; }
+      #mainWrap .contentWrap .commonFt .faq {
+        float: right; }
+        #mainWrap .contentWrap .commonFt .faq li {
+          display: inline-block; }
+          #mainWrap .contentWrap .commonFt .faq li a {
+            color: #b4b4b4; }
+          #mainWrap .contentWrap .commonFt .faq li.line {
+            color: #b4b4b4;
+            margin: 0 10px; }
+
+#ftWrap {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  margin-top: -63px;
+  background: url("../images/common/bg_footer.png") center 0 no-repeat;
+  padding-top: 135px;
+  box-sizing: border-box; }
+  #ftWrap .footer {
+    position: relative;
+    width: 1000px;
+    margin: 0 auto; }
+    #ftWrap .footer .ftlogo {
+      margin-left: 47px; }
+    #ftWrap .footer .ftLeft {
+      position: absolute;
+      top: 0;
+      left: 257px; }
+      #ftWrap .footer .ftLeft .links {
+        width: 557px;
+        height: 34px;
+        padding: 10px;
+        border-top: 1px solid #5b7179;
+        border-bottom: 1px solid #5b7179;
+        box-sizing: border-box;
+        margin-bottom: 20px; }
+        #ftWrap .footer .ftLeft .links li {
+          display: inline-block;
+          font-size: 12px; }
+          #ftWrap .footer .ftLeft .links li a {
+            color: #5b7179; }
+            #ftWrap .footer .ftLeft .links li a span {
+              color: #ff3030; }
+      #ftWrap .footer .ftLeft .copy {
+        font-size: 12px;
+        color: #5b7179;
+        margin-bottom: 15px; }
+
+.serverWrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 9999; }
+  .serverWrap .serverMain {
+    width: 1104px;
+    height: 630px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -315px;
+    margin-left: -552px;
+    background: url("../images/server/bg_server.png") no-repeat; }
+    .serverWrap .serverMain .btn_close {
+      position: absolute;
+      top: 110px;
+      right: 65px; }
+    .serverWrap .serverMain .serverList {
+      width: 907px;
+      position: relative;
+      left: 97px; }
+      .serverWrap .serverMain .serverList li {
+        width: 223px;
+        height: 49px;
+        background: url("../images/server/bg_de.png") no-repeat;
+        float: left;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        line-height: 49px; }
+        .serverWrap .serverMain .serverList li a {
+          display: block;
+          width: 223px;
+          height: 49px;
+          font-size: 17px;
+          color: #fff;
+          font-weight: bold;
+          padding-left: 16px;
+          box-sizing: border-box; }
+          .serverWrap .serverMain .serverList li a img {
+            vertical-align: middle; }
+        .serverWrap .serverMain .serverList li:nth-child(4n) {
+          margin-right: 0; }
+      .serverWrap .serverMain .serverList.recent {
+        top: 256px; }
+        .serverWrap .serverMain .serverList.recent li.on, .serverWrap .serverMain .serverList.recent li:hover {
+          background: url("../images/server/bg_recent.png") no-repeat; }
+      .serverWrap .serverMain .serverList.main {
+        top: 317px; }
+        .serverWrap .serverMain .serverList.main li.on, .serverWrap .serverMain .serverList.main li:hover {
+          background: url("../images/server/bg_sel.png") no-repeat; }
+    .serverWrap .serverMain .paging {
+      position: relative;
+      text-align: center;
+      top: 335px; }
+      .serverWrap .serverMain .paging li {
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        background: #373737;
+        text-align: center;
+        line-height: 22px;
+        margin: 0 3px; }
+        .serverWrap .serverMain .paging li a {
+          color: #acacac;
+          display: block;
+          width: 22px;
+          height: 22px; }
+        .serverWrap .serverMain .paging li.on {
+          border: 1px solid #757575;
+          background: #1a414b;
+          font-weight: bold; }
+          .serverWrap .serverMain .paging li.on a {
+            color: #fff; }
+
+/*# sourceMappingURL=common.css.map */

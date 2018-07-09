@@ -1,0 +1,93 @@
+/*
+  2017-10-30
+  enpgames
+*/
+@import url(common.css);
+#mainWrap .contentWrap {
+  height: 493px;
+  margin-top: 39px;
+  background: url("../images/main/bg_mainCon.jpg") no-repeat;
+  z-index: 99;
+  position: relative;
+  padding: 37px 0 37px 47px;
+  box-sizing: border-box; }
+  #mainWrap .contentWrap > div {
+    float: left; }
+  #mainWrap .contentWrap .more {
+    position: absolute;
+    top: 4px;
+    right: 0;
+    display: block;
+    width: 54px;
+    height: 19px;
+    border: 1px solid #8d8d8d;
+    color: #8d8d8d;
+    text-align: center;
+    line-height: 19px; }
+  #mainWrap .contentWrap .mainNoti {
+    position: relative;
+    width: 296px;
+    height: 145px; }
+    #mainWrap .contentWrap .mainNoti ul {
+      margin-top: 20px; }
+      #mainWrap .contentWrap .mainNoti ul li {
+        background: url("../images/common/s_dot.jpg") 0 center no-repeat;
+        padding-left: 10px;
+        margin-bottom: 1px;
+        letter-spacing: -1px; }
+        #mainWrap .contentWrap .mainNoti ul li .date {
+          float: right;
+          font-size: 12px;
+          color: #7a7a7a; }
+        #mainWrap .contentWrap .mainNoti ul li a {
+          font-size: 14px;
+          color: #fff; }
+          #mainWrap .contentWrap .mainNoti ul li a:hover {
+            color: #f1cd5e;
+            text-decoration: underline; }
+  #mainWrap .contentWrap .mainInfo {
+    height: 145px;
+    margin-left: 25px; }
+    #mainWrap .contentWrap .mainInfo img {
+      margin-top: -29px; }
+  #mainWrap .contentWrap .mainCash {
+    margin-left: 16px; }
+    #mainWrap .contentWrap .mainCash img {
+      margin-top: -5px; }
+  #mainWrap .contentWrap .mainVideo {
+    width: 296px;
+    height: 180px;
+    margin-top: 30px; }
+    #mainWrap .contentWrap .mainVideo a {
+      display: block;
+      width: 292px;
+      height: 136px;
+      border: 2px solid #3c3c3c;
+      margin-top: 13px; }
+  #mainWrap .contentWrap .mainImg {
+    position: relative;
+    width: 373px;
+    height: 180px;
+    margin: 30px 0 0 25px; }
+    #mainWrap .contentWrap .mainImg .img {
+      display: inline-block;
+      width: 181px;
+      height: 136px;
+      border: 2px solid #3c3c3c;
+      margin-top: 13px; }
+      #mainWrap .contentWrap .mainImg .img:last-child {
+        position: absolute;
+        bottom: 0;
+        right: 0; }
+  #mainWrap .contentWrap .mainQna {
+    float: left;
+    width: 187px;
+    height: 180px;
+    margin: 30px 0 0 25px;
+    background: url("../images/common/btn_main_btnSet.jpg") no-repeat; }
+    #mainWrap .contentWrap .mainQna li a {
+      display: block;
+      height: 60px;
+      text-indent: -99999px; }
+
+/*# sourceMappingURL=main.css.map */

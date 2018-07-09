@@ -1,0 +1,952 @@
+/*
+  2017-10-30
+  enpgames
+*/
+@import url(common.css);
+#mainWrap .subWrap {
+  width: 100%;
+  min-height: 600px;
+  position: relative;
+  background: url("../images/sub/bg_frame.png") no-repeat, url("../images/sub/frame_re.jpg") 0 0 repeat-y, url("../images/sub/frame_re.jpg") 980px 0 repeat-y, url("../images/sub/bg_pa.jpg") repeat;
+  z-index: 9999;
+  padding: 0; }
+  #mainWrap .subWrap:before {
+    content: "";
+    display: block;
+    z-index: 99;
+    width: 100%;
+    height: 20px;
+    background-image: url("../images/sub/bg_sub_top.jpg"); }
+  #mainWrap .subWrap:after {
+    content: "";
+    display: block;
+    z-index: 99;
+    width: 100%;
+    height: 11px;
+    background-image: url("../images/sub/bg_sub_bottom.jpg"); }
+  #mainWrap .subWrap .subContent {
+    position: relative;
+    width: 954px;
+    min-height: 600px;
+    margin-left: 19px;
+    background: url("../images/sub/bg_main.jpg") no-repeat;
+    padding: 27px 0 27px 27px; }
+    #mainWrap .subWrap .subContent .subNavigation {
+      display: inline-block;
+      padding: 5px 15px;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      -ms-border-radius: 20px;
+      border-radius: 20px;
+      background: #1e1c1c;
+      font-size: 12px;
+      color: #949494;
+      box-shadow: 1px 1px 10px 0.5px #000 inset;
+      margin-top: 10px; }
+      #mainWrap .subWrap .subContent .subNavigation span {
+        color: #fff; }
+    #mainWrap .subWrap .subContent .subRight_fix {
+      float: right;
+      width: 265px;
+      position: relative;
+      top: -123px; }
+      #mainWrap .subWrap .subContent .subRight_fix .subRight_Menu {
+        float: right;
+        position: relative;
+        width: 265px;
+        box-sizing: border-box;
+        padding: 110px 0 0 74px;
+        margin-bottom: 20px; }
+        #mainWrap .subWrap .subContent .subRight_fix .subRight_Menu li {
+          width: 100px;
+          height: 39px;
+          background-repeat: no-repeat; }
+          #mainWrap .subWrap .subContent .subRight_fix .subRight_Menu li a {
+            display: block;
+            width: 100px;
+            height: 39px;
+            text-indent: -99999px; }
+          #mainWrap .subWrap .subContent .subRight_fix .subRight_Menu li:nth-child(1) {
+            background-position: 0 0; }
+          #mainWrap .subWrap .subContent .subRight_fix .subRight_Menu li:nth-child(2) {
+            background-position: 0 -39px; }
+          #mainWrap .subWrap .subContent .subRight_fix .subRight_Menu li:nth-child(3) {
+            background-position: 0 -78px; }
+          #mainWrap .subWrap .subContent .subRight_fix .subRight_Menu li:nth-child(4) {
+            background-position: 0 -117px; }
+        #mainWrap .subWrap .subContent .subRight_fix .subRight_Menu.news {
+          background: url("../images/sub/bg_subMenu01.jpg") no-repeat;
+          height: 253px; }
+          #mainWrap .subWrap .subContent .subRight_fix .subRight_Menu.news li {
+            background-image: url("../images/sub/btn_sub01_off.png"); }
+            #mainWrap .subWrap .subContent .subRight_fix .subRight_Menu.news li.on, #mainWrap .subWrap .subContent .subRight_fix .subRight_Menu.news li:hover {
+              background-image: url("../images/sub/btn_sub01_on.png"); }
+        #mainWrap .subWrap .subContent .subRight_fix .subRight_Menu.introduce {
+          background: url("../images/sub/bg_subMenu02.jpg") no-repeat;
+          height: 297px; }
+          #mainWrap .subWrap .subContent .subRight_fix .subRight_Menu.introduce li {
+            background-image: url("../images/sub/btn_sub02_off.png"); }
+            #mainWrap .subWrap .subContent .subRight_fix .subRight_Menu.introduce li.on, #mainWrap .subWrap .subContent .subRight_fix .subRight_Menu.introduce li:hover {
+              background-image: url("../images/sub/btn_sub02_on.png"); }
+        #mainWrap .subWrap .subContent .subRight_fix .subRight_Menu.community {
+          background: url("../images/sub/bg_subMenu03.jpg") no-repeat;
+          height: 210px; }
+          #mainWrap .subWrap .subContent .subRight_fix .subRight_Menu.community li {
+            background-image: url("../images/sub/btn_sub03_off.png"); }
+            #mainWrap .subWrap .subContent .subRight_fix .subRight_Menu.community li.on, #mainWrap .subWrap .subContent .subRight_fix .subRight_Menu.community li:hover {
+              background-image: url("../images/sub/btn_sub03_on.png"); }
+        #mainWrap .subWrap .subContent .subRight_fix .subRight_Menu.shop {
+          background: url("../images/sub/bg_subMenu04.jpg") no-repeat;
+          height: 210px; }
+          #mainWrap .subWrap .subContent .subRight_fix .subRight_Menu.shop li {
+            background-image: url("../images/sub/btn_sub04_off.png"); }
+            #mainWrap .subWrap .subContent .subRight_fix .subRight_Menu.shop li.on, #mainWrap .subWrap .subContent .subRight_fix .subRight_Menu.shop li:hover {
+              background-image: url("../images/sub/btn_sub04_on.png"); }
+        #mainWrap .subWrap .subContent .subRight_fix .subRight_Menu.customer {
+          background: url("../images/sub/bg_subMenu05.jpg") no-repeat;
+          height: 253px;
+          top: -1px; }
+          #mainWrap .subWrap .subContent .subRight_fix .subRight_Menu.customer li {
+            background-image: url("../images/sub/btn_sub05_off.png"); }
+            #mainWrap .subWrap .subContent .subRight_fix .subRight_Menu.customer li.on, #mainWrap .subWrap .subContent .subRight_fix .subRight_Menu.customer li:hover {
+              background-image: url("../images/sub/btn_sub05_on.png"); }
+      #mainWrap .subWrap .subContent .subRight_fix .subRight_purchase {
+        margin-left: 25px; }
+      #mainWrap .subWrap .subContent .subRight_fix .subRight_qna {
+        margin-left: 31px;
+        margin-top: 30px;
+        width: 187px;
+        height: 180px;
+        background: url("../images/common/btn_main_btnSet.jpg") no-repeat; }
+        #mainWrap .subWrap .subContent .subRight_fix .subRight_qna li a {
+          display: block;
+          height: 60px;
+          text-indent: -99999px; }
+    #mainWrap .subWrap .subContent .tab {
+      width: 630px;
+      height: 60px;
+      background: url("../images/sub/sub01_tab_off.png") no-repeat;
+      margin-top: 40px;
+      padding: 4px 0 0 4px;
+      box-sizing: border-box; }
+      #mainWrap .subWrap .subContent .tab li {
+        display: inline-block;
+        margin-right: 3px; }
+        #mainWrap .subWrap .subContent .tab li a {
+          display: block;
+          width: 150px;
+          height: 50px;
+          text-indent: -99999px; }
+        #mainWrap .subWrap .subContent .tab li:hover, #mainWrap .subWrap .subContent .tab li.on {
+          background-image: url("../images/sub/sub01_tab_on.png"); }
+        #mainWrap .subWrap .subContent .tab li:nth-child(1):hover, #mainWrap .subWrap .subContent .tab li.on:nth-child(1) {
+          background-position: 0 0; }
+        #mainWrap .subWrap .subContent .tab li:nth-child(2):hover, #mainWrap .subWrap .subContent .tab li.on:nth-child(2) {
+          background-position: -157px 0; }
+        #mainWrap .subWrap .subContent .tab li:nth-child(3):hover, #mainWrap .subWrap .subContent .tab li.on:nth-child(3) {
+          background-position: -315px 0; }
+        #mainWrap .subWrap .subContent .tab li:nth-child(4):hover, #mainWrap .subWrap .subContent .tab li.on:nth-child(4) {
+          background-position: -472px 0; }
+      #mainWrap .subWrap .subContent .tab.commuTab {
+        width: 473px;
+        background: url("../images/sub/sub04_tab_off.png") no-repeat; }
+        #mainWrap .subWrap .subContent .tab.commuTab li:hover, #mainWrap .subWrap .subContent .tab.commuTab li.on {
+          background-image: url("../images/sub/sub04_tab_on.png"); }
+      #mainWrap .subWrap .subContent .tab.shopTab {
+        width: 316px;
+        background: url("../images/sub/sub05_tab_off.png") no-repeat; }
+        #mainWrap .subWrap .subContent .tab.shopTab li:hover, #mainWrap .subWrap .subContent .tab.shopTab li.on {
+          background-image: url("../images/sub/sub05_tab_on.png"); }
+    #mainWrap .subWrap .subContent .subCommonWrap {
+      position: relative;
+      width: 684px;
+      margin-top: 20px; }
+    #mainWrap .subWrap .subContent .listWrap .boardList {
+      width: 100%;
+      margin-top: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #bdbdbd; }
+      #mainWrap .subWrap .subContent .listWrap .boardList .tableHead {
+        border: 1px solid #343434;
+        border-top: 1px solid #4d4d4d;
+        height: 46px; }
+      #mainWrap .subWrap .subContent .listWrap .boardList th {
+        height: 24px !important;
+        background: #222;
+        position: relative; }
+        #mainWrap .subWrap .subContent .listWrap .boardList th .line {
+          display: block;
+          position: absolute;
+          top: 11px;
+          right: 0;
+          width: 1px;
+          height: 24px;
+          background: #4d4d4d; }
+      #mainWrap .subWrap .subContent .listWrap .boardList td {
+        height: 50px;
+        border-bottom: 1px solid #4d4d4d;
+        color: #999; }
+        #mainWrap .subWrap .subContent .listWrap .boardList td.title {
+          text-align: left;
+          padding-left: 5px; }
+          #mainWrap .subWrap .subContent .listWrap .boardList td.title a {
+            color: #bdbdbd; }
+            #mainWrap .subWrap .subContent .listWrap .boardList td.title a:hover {
+              text-decoration: underline;
+              color: #f1cd5e; }
+              #mainWrap .subWrap .subContent .listWrap .boardList td.title a:hover .commentCount {
+                color: #f1cd5e; }
+            #mainWrap .subWrap .subContent .listWrap .boardList td.title a .commentCount {
+              font-size: 12px;
+              color: #5ba1ae; }
+        #mainWrap .subWrap .subContent .listWrap .boardList td.writer {
+          font-size: 12px; }
+    #mainWrap .subWrap .subContent .viewWrap .viewTitle {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 10px 25px;
+      background: #222;
+      font-size: 16px;
+      font-weight: bold;
+      color: #bdbdbd;
+      border-right: 1px solid #343434;
+      border-left: 1px solid #343434;
+      border-top: 1px solid #4d4d4d; }
+      #mainWrap .subWrap .subContent .viewWrap .viewTitle.write {
+        padding: 10px 15px; }
+        #mainWrap .subWrap .subContent .viewWrap .viewTitle.write dt, #mainWrap .subWrap .subContent .viewWrap .viewTitle.write dd {
+          display: inline-block; }
+        #mainWrap .subWrap .subContent .viewWrap .viewTitle.write dt {
+          font-size: 15px;
+          margin-right: 3px; }
+        #mainWrap .subWrap .subContent .viewWrap .viewTitle.write select {
+          width: 124px;
+          height: 30px; }
+        #mainWrap .subWrap .subContent .viewWrap .viewTitle.write input {
+          width: 483px;
+          height: 30px;
+          padding: 0 5px; }
+        #mainWrap .subWrap .subContent .viewWrap .viewTitle.write .img input {
+          width: 613px; }
+    #mainWrap .subWrap .subContent .viewWrap .viewInfo {
+      box-sizing: border-box;
+      width: 100%;
+      height: 46px;
+      background: #303030;
+      border: 1px solid #343434;
+      padding: 10px 25px; }
+      #mainWrap .subWrap .subContent .viewWrap .viewInfo .writer {
+        float: left;
+        color: #999; }
+        #mainWrap .subWrap .subContent .viewWrap .viewInfo .writer dt {
+          float: left;
+          font-size: 15px;
+          font-weight: bold;
+          padding-right: 10px;
+          border-right: 1px solid #4d4d4d;
+          line-height: 24px;
+          margin-right: 10px; }
+        #mainWrap .subWrap .subContent .viewWrap .viewInfo .writer dd {
+          float: left;
+          font-size: 14px;
+          line-height: 24px; }
+      #mainWrap .subWrap .subContent .viewWrap .viewInfo .date {
+        float: right;
+        color: #999; }
+        #mainWrap .subWrap .subContent .viewWrap .viewInfo .date dt {
+          float: left;
+          font-size: 15px;
+          font-weight: bold;
+          padding-right: 10px;
+          border-right: 1px solid #4d4d4d;
+          line-height: 24px;
+          margin-right: 10px; }
+        #mainWrap .subWrap .subContent .viewWrap .viewInfo .date dd {
+          float: left;
+          font-size: 14px;
+          line-height: 24px; }
+    #mainWrap .subWrap .subContent .viewWrap .viewMain {
+      padding: 25px;
+      line-height: 1.5em;
+      color: #bdbdbd;
+      font-size: 14px;
+      border-bottom: 1px solid #4d4d4d; }
+      #mainWrap .subWrap .subContent .viewWrap .viewMain img {
+        max-width: 100%; }
+    #mainWrap .subWrap .subContent .viewWrap .viewBtn {
+      margin-top: 30px;
+      position: relative; }
+      #mainWrap .subWrap .subContent .viewWrap .viewBtn .listBtn {
+        position: absolute;
+        right: 0;
+        top: 0; }
+    #mainWrap .subWrap .subContent .viewWrap .commentWrap {
+      margin-top: 35px; }
+      #mainWrap .subWrap .subContent .viewWrap .commentWrap .commentTitle h3 {
+        display: inline-block; }
+      #mainWrap .subWrap .subContent .viewWrap .commentWrap .commentTitle .count {
+        display: inline-block;
+        vertical-align: bottom;
+        color: #858585;
+        font-size: 14px; }
+        #mainWrap .subWrap .subContent .viewWrap .commentWrap .commentTitle .count span {
+          color: #78bac1; }
+      #mainWrap .subWrap .subContent .viewWrap .commentWrap .commentBox {
+        margin-top: 20px; }
+        #mainWrap .subWrap .subContent .viewWrap .commentWrap .commentBox textarea {
+          box-sizing: border-box;
+          width: 582px;
+          height: 83px;
+          background: #222;
+          border: 1px solid #5e5e5e;
+          font-size: 14px;
+          color: #cfcfcf;
+          padding: 10px; }
+        #mainWrap .subWrap .subContent .viewWrap .commentWrap .commentBox a {
+          float: right; }
+      #mainWrap .subWrap .subContent .viewWrap .commentWrap .commentList {
+        position: relative;
+        width: 684px;
+        margin-top: 20px; }
+        #mainWrap .subWrap .subContent .viewWrap .commentWrap .commentList dt .writer {
+          font-size: 16px;
+          color: #78bac1;
+          margin-right: 5px; }
+        #mainWrap .subWrap .subContent .viewWrap .commentWrap .commentList dt .date {
+          display: inline-block;
+          height: 10px;
+          font-size: 12px;
+          color: #bdbdbd;
+          border-left: 1px solid #4d4d4d;
+          padding-left: 10px;
+          line-height: 10px;
+          vertical-align: bottom; }
+        #mainWrap .subWrap .subContent .viewWrap .commentWrap .commentList dd {
+          position: relative;
+          width: 100%;
+          padding: 14px 0;
+          margin-bottom: 20px;
+          font-size: 14px;
+          color: #bdbdbd;
+          line-height: 1.5em;
+          border-bottom: 1px solid #4d4d4d; }
+          #mainWrap .subWrap .subContent .viewWrap .commentWrap .commentList dd .delete {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            background: #333;
+            font-size: 12px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 20px; }
+    #mainWrap .subWrap .subContent .viewWrap .editor {
+      height: 487px;
+      border-bottom: 1px solid #4d4d4d;
+      background: #131213; }
+    #mainWrap .subWrap .subContent .viewWrap .writeInfo {
+      font-size: 12px;
+      color: #989898;
+      letter-spacing: -0.5px;
+      margin-top: 15px; }
+      #mainWrap .subWrap .subContent .viewWrap .writeInfo span {
+        color: #dfdfdf;
+        font-weight: bold; }
+    #mainWrap .subWrap .subContent .imgListWrap {
+      position: relative;
+      margin-top: 40px; }
+      #mainWrap .subWrap .subContent .imgListWrap .imgList li {
+        float: left;
+        width: 220px;
+        height: 292px;
+        margin-right: 12px;
+        margin-bottom: 12px; }
+        #mainWrap .subWrap .subContent .imgListWrap .imgList li a {
+          display: block;
+          width: 220px;
+          height: 292px; }
+          #mainWrap .subWrap .subContent .imgListWrap .imgList li a:hover .title {
+            color: #f1cd5e; }
+            #mainWrap .subWrap .subContent .imgListWrap .imgList li a:hover .title .commentCount {
+              color: #f1cd5e; }
+        #mainWrap .subWrap .subContent .imgListWrap .imgList li:nth-child(3n) {
+          margin-right: 0; }
+        #mainWrap .subWrap .subContent .imgListWrap .imgList li .info {
+          box-sizing: border-box;
+          width: 220px;
+          height: 125px;
+          background: url("../images/sub/bg_event.jpg") no-repeat;
+          padding-top: 20px;
+          border: 1px solid #3c3c3c;
+          border-top: 0;
+          text-align: center;
+          letter-spacing: -0.5px;
+          line-height: 1.5em; }
+          #mainWrap .subWrap .subContent .imgListWrap .imgList li .info .title {
+            color: #fff;
+            font-size: 16px; }
+          #mainWrap .subWrap .subContent .imgListWrap .imgList li .info .date {
+            color: #5ba1ae;
+            font-size: 12px;
+            letter-spacing: 0.5px; }
+          #mainWrap .subWrap .subContent .imgListWrap .imgList li .info .txt {
+            color: #bdbdbd;
+            font-size: 14px;
+            margin-bottom: 12px; }
+      #mainWrap .subWrap .subContent .imgListWrap .imgList.imgBoardList .info {
+        background: url("../images/sub/bg_imglist.jpg") no-repeat;
+        padding-top: 15px; }
+      #mainWrap .subWrap .subContent .imgListWrap .imgList.imgBoardList .title {
+        width: 202px;
+        border-bottom: 1px solid #454545;
+        padding-bottom: 10px;
+        margin-left: 9px;
+        font-size: 14px !important; }
+        #mainWrap .subWrap .subContent .imgListWrap .imgList.imgBoardList .title .commentCount {
+          font-size: 12px !important;
+          color: #5ba1ae; }
+      #mainWrap .subWrap .subContent .imgListWrap .imgList.imgBoardList .writer {
+        font-size: 12px;
+        color: #999;
+        padding-top: 15px; }
+      #mainWrap .subWrap .subContent .imgListWrap .imgList.imgBoardList .date {
+        color: #999 !important; }
+    #mainWrap .subWrap .subContent .boardBtn {
+      position: relative;
+      top: 20px;
+      width: 100%;
+      height: 35px;
+      z-index: 99; }
+      #mainWrap .subWrap .subContent .boardBtn .btn_write {
+        position: absolute;
+        right: 0; }
+    #mainWrap .subWrap .subContent .guideWrap {
+      width: 700px;
+      margin-top: 40px; }
+      #mainWrap .subWrap .subContent .guideWrap .guideTab {
+        width: 684px;
+        height: 58px;
+        background: url("../images/sub/sub02_tab_off.jpg") no-repeat;
+        box-sizing: border-box; }
+        #mainWrap .subWrap .subContent .guideWrap .guideTab li {
+          float: left; }
+          #mainWrap .subWrap .subContent .guideWrap .guideTab li a {
+            display: block;
+            width: 228px;
+            height: 58px;
+            text-indent: -99999px; }
+          #mainWrap .subWrap .subContent .guideWrap .guideTab li:hover, #mainWrap .subWrap .subContent .guideWrap .guideTab li.on {
+            background-image: url("../images/sub/sub02_tab_on.jpg"); }
+          #mainWrap .subWrap .subContent .guideWrap .guideTab li:nth-child(1):hover, #mainWrap .subWrap .subContent .guideWrap .guideTab li.on:nth-child(1) {
+            background-position: 0 0; }
+          #mainWrap .subWrap .subContent .guideWrap .guideTab li:nth-child(2):hover, #mainWrap .subWrap .subContent .guideWrap .guideTab li.on:nth-child(2) {
+            background-position: -228px 0; }
+          #mainWrap .subWrap .subContent .guideWrap .guideTab li:nth-child(3):hover, #mainWrap .subWrap .subContent .guideWrap .guideTab li.on:nth-child(3) {
+            background-position: -456px 0; }
+        #mainWrap .subWrap .subContent .guideWrap .guideTab.beginTab {
+          width: 367px;
+          height: 48px;
+          background: url("../images/sub/sub03_tab_off.png") no-repeat; }
+          #mainWrap .subWrap .subContent .guideWrap .guideTab.beginTab li:first-child {
+            margin-right: 1px; }
+          #mainWrap .subWrap .subContent .guideWrap .guideTab.beginTab li a {
+            width: 183px;
+            height: 48px; }
+          #mainWrap .subWrap .subContent .guideWrap .guideTab.beginTab li:hover, #mainWrap .subWrap .subContent .guideWrap .guideTab.beginTab li.on {
+            background-image: url("../images/sub/sub03_tab_on.png"); }
+          #mainWrap .subWrap .subContent .guideWrap .guideTab.beginTab li:nth-child(2):hover, #mainWrap .subWrap .subContent .guideWrap .guideTab.beginTab li.on:nth-child(2) {
+            background-position: -184px 0; }
+      #mainWrap .subWrap .subContent .guideWrap .beginner {
+        position: relative; }
+        #mainWrap .subWrap .subContent .guideWrap .beginner a {
+          display: block;
+          width: 66px;
+          height: 27px;
+          text-indent: -99999px; }
+        #mainWrap .subWrap .subContent .guideWrap .beginner .btn_adobe {
+          position: absolute;
+          top: 295px;
+          left: 263px; }
+        #mainWrap .subWrap .subContent .guideWrap .beginner .browser {
+          position: absolute;
+          bottom: 39px;
+          left: 29px;
+          width: 626px; }
+          #mainWrap .subWrap .subContent .guideWrap .beginner .browser li {
+            float: left;
+            width: 313px;
+            height: 76px;
+            position: relative; }
+            #mainWrap .subWrap .subContent .guideWrap .beginner .browser li a {
+              position: absolute;
+              top: 25px;
+              left: 234px; }
+      #mainWrap .subWrap .subContent .guideWrap .problem {
+        position: relative; }
+        #mainWrap .subWrap .subContent .guideWrap .problem .btn_goFaq {
+          display: block;
+          width: 137px;
+          height: 31px;
+          position: absolute;
+          top: 111px;
+          right: 16px;
+          text-indent: -99999px; }
+        #mainWrap .subWrap .subContent .guideWrap .problem .question {
+          box-sizing: border-box;
+          width: 684px;
+          border: 1px solid #5a5a5a;
+          border-top: 0;
+          background: #1f1f1f;
+          padding: 20px 0; }
+          #mainWrap .subWrap .subContent .guideWrap .problem .question .qTitle {
+            box-sizing: border-box;
+            width: 100%;
+            height: 43px;
+            background: #121212;
+            font-size: 16px;
+            color: #fff;
+            line-height: 43px;
+            padding-left: 30px; }
+            #mainWrap .subWrap .subContent .guideWrap .problem .question .qTitle span {
+              color: #4396f6; }
+          #mainWrap .subWrap .subContent .guideWrap .problem .question .answer {
+            padding: 0 30px; }
+            #mainWrap .subWrap .subContent .guideWrap .problem .question .answer > li {
+              font-size: 12px;
+              color: #a3a3a3;
+              line-height: 1.8em;
+              margin-top: 20px;
+              letter-spacing: -1px; }
+            #mainWrap .subWrap .subContent .guideWrap .problem .question .answer .title {
+              font-size: 14px;
+              color: #f1cd5e;
+              font-weight: bold; }
+      #mainWrap .subWrap .subContent .guideWrap .guideCategory {
+        position: relative; }
+        #mainWrap .subWrap .subContent .guideWrap .guideCategory > li {
+          width: 220px;
+          display: inline-block;
+          margin: 0 9px 30px 0;
+          vertical-align: top; }
+          #mainWrap .subWrap .subContent .guideWrap .guideCategory > li:nth-child(3n) {
+            margin-right: 0; }
+          #mainWrap .subWrap .subContent .guideWrap .guideCategory > li .category {
+            width: 220px;
+            height: 48px;
+            background: url("../images/sub/bg_guideTop.jpg") no-repeat;
+            color: #fff;
+            font-size: 15px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 48px; }
+          #mainWrap .subWrap .subContent .guideWrap .guideCategory > li ul > li {
+            margin-bottom: 1px;
+            text-align: center;
+            font-size: 14px; }
+            #mainWrap .subWrap .subContent .guideWrap .guideCategory > li ul > li a {
+              display: block;
+              width: 220px;
+              height: 37px;
+              background: #041118;
+              color: #fff;
+              line-height: 37px; }
+            #mainWrap .subWrap .subContent .guideWrap .guideCategory > li ul > li:nth-child(2n) a {
+              background: #051b27; }
+    #mainWrap .subWrap .subContent .shopWrap {
+      position: relative; }
+      #mainWrap .subWrap .subContent .shopWrap .info {
+        background: url("../images/sub/shop_info.jpg") no-repeat;
+        width: 684px;
+        height: 168px;
+        margin-bottom: 26px; }
+      #mainWrap .subWrap .subContent .shopWrap .coinList li {
+        position: relative;
+        display: inline-block;
+        width: 220px;
+        height: 281px;
+        font-size: 14px;
+        color: #f6f6f6;
+        font-weight: bold;
+        margin: 0 7.4px 12px 0;
+        text-align: center; }
+        #mainWrap .subWrap .subContent .shopWrap .coinList li .coin {
+          position: absolute;
+          top: 0;
+          left: 0; }
+        #mainWrap .subWrap .subContent .shopWrap .coinList li .cash {
+          position: relative;
+          top: 213px; }
+          #mainWrap .subWrap .subContent .shopWrap .coinList li .cash span {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -ms-border-radius: 3px;
+            border-radius: 3px;
+            background: #9f292e;
+            font-size: 12px;
+            text-align: center;
+            line-height: 16px; }
+        #mainWrap .subWrap .subContent .shopWrap .coinList li .btnSet {
+          position: relative;
+          top: 220px; }
+        #mainWrap .subWrap .subContent .shopWrap .coinList li:nth-child(3n) {
+          margin-right: 0; }
+      #mainWrap .subWrap .subContent .shopWrap .shopSearch {
+        position: absolute;
+        top: -60px;
+        right: 0; }
+        #mainWrap .subWrap .subContent .shopWrap .shopSearch .year {
+          width: 120px;
+          height: 35px;
+          border: 1px solid #5e5e5e;
+          background: #222222;
+          color: #fff;
+          padding-left: 5px; }
+        #mainWrap .subWrap .subContent .shopWrap .shopSearch .month {
+          width: 86px;
+          height: 35px;
+          border: 1px solid #5e5e5e;
+          background: #222222;
+          color: #fff;
+          padding-left: 5px; }
+    #mainWrap .subWrap .subContent .faqWrap .faqTab {
+      width: 684px;
+      height: 48px;
+      background: none;
+      padding: 0; }
+      #mainWrap .subWrap .subContent .faqWrap .faqTab li {
+        float: left;
+        width: 96px;
+        height: 48px;
+        background: url("../images/sub/tab_faq_off.jpg") no-repeat;
+        margin-right: 1px; }
+        #mainWrap .subWrap .subContent .faqWrap .faqTab li a {
+          display: block;
+          width: 96px;
+          height: 48px;
+          text-align: center;
+          line-height: 48px;
+          text-indent: 0;
+          font-size: 15px;
+          color: #a2a2a2; }
+        #mainWrap .subWrap .subContent .faqWrap .faqTab li:hover, #mainWrap .subWrap .subContent .faqWrap .faqTab li.on {
+          background: url("../images/sub/tab_faq_on.jpg") no-repeat; }
+          #mainWrap .subWrap .subContent .faqWrap .faqTab li:hover a, #mainWrap .subWrap .subContent .faqWrap .faqTab li.on a {
+            color: #fff;
+            font-weight: bold; }
+    #mainWrap .subWrap .subContent .faqWrap .faqList {
+      margin-top: 0; }
+      #mainWrap .subWrap .subContent .faqWrap .faqList .tableFaqHead {
+        border: 0;
+        height: 49px; }
+        #mainWrap .subWrap .subContent .faqWrap .faqList .tableFaqHead th {
+          background: url("../images/sub/bg_faqT.jpg") repeat-x;
+          font-size: 14px;
+          color: #627e8d;
+          border-bottom: 1px solid rgba(80, 80, 80, 0.2); }
+      #mainWrap .subWrap .subContent .faqWrap .faqList td {
+        height: 40px;
+        border: 0;
+        border-bottom: 1px solid rgba(80, 80, 80, 0.2); }
+      #mainWrap .subWrap .subContent .faqWrap .faqList .faqCategory {
+        background: #002233;
+        text-align: center;
+        color: #b2c2ca;
+        border-right: 2px solid rgba(36, 36, 36, 0.3); }
+      #mainWrap .subWrap .subContent .faqWrap .faqList .faqCon {
+        background: #1b1e1f;
+        text-align: left;
+        padding-left: 15px; }
+        #mainWrap .subWrap .subContent .faqWrap .faqList .faqCon a {
+          color: #b2c2ca; }
+    #mainWrap .subWrap .subContent .faqWrap .faqTitle {
+      width: 100%;
+      height: 49px;
+      background: url("../images/sub/bg_faqT.jpg") repeat-x;
+      font-size: 14px;
+      color: #d5d5d5;
+      font-weight: bold;
+      padding: 15px 25px;
+      box-sizing: border-box; }
+    #mainWrap .subWrap .subContent .faqWrap .faqMain {
+      margin-top: 1px;
+      background: #1b1e1f;
+      padding: 20px 25px;
+      font-size: 14px;
+      color: #b2c2ca; }
+    #mainWrap .subWrap .subContent .faqWrap .faqInfo {
+      margin-top: 1px;
+      width: 100%;
+      height: 39px;
+      background: #2a3033;
+      padding: 12px 25px;
+      font-size: 12px;
+      color: #6c7e87;
+      box-sizing: border-box;
+      letter-spacing: -0.5px; }
+      #mainWrap .subWrap .subContent .faqWrap .faqInfo a {
+        float: right;
+        color: #afc2cc;
+        font-weight: bold; }
+    #mainWrap .subWrap .subContent .faqWrap .faqBtn {
+      margin-top: 50px;
+      text-align: right; }
+    #mainWrap .subWrap .subContent .faqWrap .qnaInfo {
+      box-sizing: border-box;
+      height: 51px;
+      background: #2a3033;
+      padding: 15px 35px; }
+      #mainWrap .subWrap .subContent .faqWrap .qnaInfo dt, #mainWrap .subWrap .subContent .faqWrap .qnaInfo dd {
+        float: left;
+        font-size: 14px;
+        color: #93a2a9;
+        vertical-align: middle; }
+      #mainWrap .subWrap .subContent .faqWrap .qnaInfo dd {
+        margin-left: 5px; }
+      #mainWrap .subWrap .subContent .faqWrap .qnaInfo .qnaProcess {
+        float: left; }
+      #mainWrap .subWrap .subContent .faqWrap .qnaInfo .qnaDate {
+        float: right; }
+      #mainWrap .subWrap .subContent .faqWrap .qnaInfo .qnaIcon {
+        display: inline-block;
+        width: 42px;
+        height: 17px;
+        text-align: center;
+        line-height: 17px;
+        color: #fff;
+        font-size: 12px; }
+        #mainWrap .subWrap .subContent .faqWrap .qnaInfo .qnaIcon.qna01 {
+          background: #0e4b69; }
+        #mainWrap .subWrap .subContent .faqWrap .qnaInfo .qnaIcon.qna02 {
+          background: #496330; }
+        #mainWrap .subWrap .subContent .faqWrap .qnaInfo .qnaIcon.qna03 {
+          background: #353635; }
+        #mainWrap .subWrap .subContent .faqWrap .qnaInfo .qnaIcon.qna04 {
+          background: #0f4b42; }
+        #mainWrap .subWrap .subContent .faqWrap .qnaInfo .qnaIcon.qna05 {
+          background: #b45d00; }
+    #mainWrap .subWrap .subContent .faqWrap .qnaAnswer {
+      box-sizing: border-box;
+      border: 1px solid #2a3941;
+      background: #061721;
+      padding: 30px 35px;
+      font-size: 14px;
+      color: #c7dde8;
+      font-weight: bold; }
+    #mainWrap .subWrap .subContent .qnaWrap {
+      margin-top: 40px; }
+      #mainWrap .subWrap .subContent .qnaWrap .qnaMain {
+        position: relative;
+        width: 100%;
+        height: 419px;
+        background: url("../images/sub/img_qna.jpg") no-repeat; }
+        #mainWrap .subWrap .subContent .qnaWrap .qnaMain .qnaTxt {
+          font-size: 12px;
+          color: #a6c1cf;
+          position: absolute;
+          top: 67px;
+          left: 36px;
+          letter-spacing: -0.5px;
+          line-height: 1.5em; }
+          #mainWrap .subWrap .subContent .qnaWrap .qnaMain .qnaTxt strong {
+            color: #fff; }
+        #mainWrap .subWrap .subContent .qnaWrap .qnaMain .btn_qna {
+          display: block;
+          width: 85px;
+          height: 21px;
+          position: relative;
+          text-indent: -99999px; }
+          #mainWrap .subWrap .subContent .qnaWrap .qnaMain .btn_qna.go_faq {
+            top: 114px;
+            left: 36px; }
+          #mainWrap .subWrap .subContent .qnaWrap .qnaMain .btn_qna.go_cs {
+            top: 93px;
+            left: 123px; }
+          #mainWrap .subWrap .subContent .qnaWrap .qnaMain .btn_qna.go_qna {
+            top: 308px;
+            left: 126px; }
+          #mainWrap .subWrap .subContent .qnaWrap .qnaMain .btn_qna.go_qnaCheck {
+            top: 287px;
+            left: 473px; }
+      #mainWrap .subWrap .subContent .qnaWrap .qnaWriteInfo {
+        width: 684px;
+        height: 137px;
+        background: url("../images/sub/img_qnaWrite.jpg") no-repeat;
+        box-sizing: border-box;
+        padding: 70px 36px 0;
+        font-size: 12px;
+        color: #a6c1cf;
+        letter-spacing: -0.5px;
+        line-height: 1.5em; }
+        #mainWrap .subWrap .subContent .qnaWrap .qnaWriteInfo strong {
+          color: #fff; }
+      #mainWrap .subWrap .subContent .qnaWrap .qnaWrite {
+        width: 684px; }
+        #mainWrap .subWrap .subContent .qnaWrap .qnaWrite th {
+          background: #002233;
+          text-align: left;
+          color: #b2c2ca;
+          border-right: 2px solid rgba(36, 36, 36, 0.5);
+          border-bottom: 2px solid rgba(36, 36, 36, 0.5);
+          padding-left: 25px; }
+        #mainWrap .subWrap .subContent .qnaWrap .qnaWrite td {
+          background: #1b1e1f;
+          border-bottom: 2px solid rgba(36, 36, 36, 0.5);
+          padding: 7px;
+          box-sizing: border-box; }
+          #mainWrap .subWrap .subContent .qnaWrap .qnaWrite td select {
+            width: 137px;
+            height: 26px;
+            border: 1px solid #737c92;
+            margin-right: 10px; }
+          #mainWrap .subWrap .subContent .qnaWrap .qnaWrite td label {
+            font-size: 12px;
+            color: #b2c2ca;
+            font-weight: bold;
+            margin-right: 5px; }
+          #mainWrap .subWrap .subContent .qnaWrap .qnaWrite td .info {
+            width: 166px;
+            height: 26px;
+            border: 1px solid #737c92;
+            margin-right: 10px; }
+          #mainWrap .subWrap .subContent .qnaWrap .qnaWrite td p {
+            color: #3893b1;
+            font-size: 12px;
+            letter-spacing: -0.5px;
+            margin-top: 8px; }
+          #mainWrap .subWrap .subContent .qnaWrap .qnaWrite td .text {
+            width: 490px;
+            height: 26px;
+            border: 1px solid #737c92; }
+          #mainWrap .subWrap .subContent .qnaWrap .qnaWrite td.editor {
+            border-bottom: 1px solid #4d4d4d !important;
+            padding: 0; }
+      #mainWrap .subWrap .subContent .qnaWrap .qnaBtn {
+        margin-top: 20px; }
+        #mainWrap .subWrap .subContent .qnaWrap .qnaBtn .btn_ok {
+          float: right; }
+      #mainWrap .subWrap .subContent .qnaWrap .attachInfo {
+        color: #989898;
+        font-size: 12px;
+        margin-top: 10px; }
+        #mainWrap .subWrap .subContent .qnaWrap .attachInfo strong {
+          color: #dfdfdf; }
+    #mainWrap .subWrap .subContent .policyWrap .policyTop {
+      width: 684px;
+      height: 197px;
+      background: url("../images/sub/img_policy.jpg") no-repeat;
+      padding: 33px 36px 0;
+      box-sizing: border-box; }
+      #mainWrap .subWrap .subContent .policyWrap .policyTop ol {
+        font-size: 12px;
+        line-height: 1.5em;
+        float: left;
+        width: 180px;
+        letter-spacing: -0.5px; }
+        #mainWrap .subWrap .subContent .policyWrap .policyTop ol a {
+          color: #a6c1cf; }
+          #mainWrap .subWrap .subContent .policyWrap .policyTop ol a span {
+            color: #f0faff; }
+    #mainWrap .subWrap .subContent .policyWrap .policyMain {
+      background: #1b1e1f;
+      width: 100%;
+      padding: 35px;
+      box-sizing: border-box;
+      font-size: 12px;
+      color: #879499;
+      letter-spacing: -0.5px; }
+      #mainWrap .subWrap .subContent .policyWrap .policyMain .policyTitle {
+        font-size: 14px;
+        color: #a6c1cf;
+        font-weight: bold;
+        margin-bottom: 20px; }
+  #mainWrap .subWrap .paging {
+    position: relative;
+    text-align: center;
+    margin: 30px 0 35px; }
+    #mainWrap .subWrap .paging li {
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      background: #373737;
+      text-align: center;
+      line-height: 22px;
+      margin: 0 3px; }
+      #mainWrap .subWrap .paging li a {
+        color: #acacac;
+        display: block;
+        width: 22px;
+        height: 22px; }
+      #mainWrap .subWrap .paging li.on {
+        border: 1px solid #757575;
+        background: #1a414b;
+        font-weight: bold; }
+        #mainWrap .subWrap .paging li.on a {
+          color: #fff; }
+    #mainWrap .subWrap .paging.bPaging {
+      margin-top: -10px; }
+  #mainWrap .subWrap .searchWrap .search_category {
+    width: 150px;
+    height: 35px;
+    border: 1px solid #5e5e5e;
+    background: #222222;
+    color: #cfcfcf;
+    font-size: 14px;
+    float: left;
+    margin-right: 5px; }
+  #mainWrap .subWrap .searchWrap .search {
+    width: 418px;
+    height: 35px;
+    border: 1px solid #5e5e5e;
+    background: #222222;
+    color: #cfcfcf;
+    font-size: 14px; }
+  #mainWrap .subWrap .searchWrap .btn_search {
+    margin-left: 6px; }
+  #mainWrap .subWrap .commonFt {
+    margin-left: 47px;
+    margin-bottom: 25px;
+    position: relative; }
+    #mainWrap .subWrap .commonFt .faq {
+      position: absolute;
+      top: 12px;
+      right: 20px; }
+
+.icon30 {
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: -1px;
+  line-height: 15px;
+  text-align: center; }
+  .icon30.noti {
+    background: #3a5581; }
+  .icon30.info {
+    background: #912c2c; }
+  .icon30.main {
+    background: #81563a; }
+
+.icon15 {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 15px;
+  text-align: center; }
+  .icon15.new {
+    background: #9f292e;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px; }
+
+/*# sourceMappingURL=sub.css.map */
