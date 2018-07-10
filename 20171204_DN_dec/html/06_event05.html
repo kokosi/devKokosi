@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+    <meta name="description" content="드래곤 네스트 12월 이벤트 - 드네 밖은 위험해!" />
+    <meta name="author" content="드래곤 네스트" />
+    <meta name="keywords" content="드래곤네스트, 드래곤네스트" />
+    <title>드래곤 네스트 - 12월 업데이트</title>
+    <!--css-->
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../css/animate.css" />
+    <!--js-->
+    <script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-parallax.js"></script>
+    <script type="text/javascript">
+
+        //quick
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 100) {
+                $('.quickBtn_event02').addClass('show').fadeIn();
+            } else {
+                $('.quickBtn_event02').fadeOut().removeClass('show');
+            }
+        });
+
+        //jelly
+        $( document ).mousemove(function(e) {
+            $('.jelly1').parallax(-30,e);
+            $('.jelly2').parallax(20,e);
+        });
+
+
+    </script>
+
+</head>
+<body>
+
+<div id="wrap" class="event05">
+
+    <!--quick btns-->
+    <div class="quickBtn_event02 quickBtn_event05">
+        <p class="hidden">12월 핫이슈</p>
+        <ul>
+            <li><a href="#">그린 드래곤 네스트</a></li>
+            <li><a href="#">미라클 젤리젤리</a></li>
+            <li><a href="#">크리스마스 이벤트</a></li>
+            <li><a href="#">2017 드네 연말정산</a></li>
+            <li><a href="#">신년 이벤트</a></li>
+        </ul>
+        <a class="btn_go goHome" href="#">드네 홈 바로가기</a>
+        <a class="btn_go goIntro" href="#">인트로 바로가기</a>
+    </div>
+
+    <section id="mainWrap">
+        <!--gnb-->
+        <div class="gnb">
+            <p class="logo"><img src="../images/event05/logo.png" alt="드래곤 네스트" /></p>
+            <p class="event_2018"><img src="../images/event05/img_2018.png" alt="2018 황금개띠 이벤트" /></p>
+        </div>
+
+        <!--title-->
+        <h1>
+            <img class="animated flipInX" src="../images/event05/top_title.png" alt="새해도 세헤에서" />
+            <img class="animated jackInTheBox" src="../images/event05/title.png" alt="드네와 함께하개! - 2018.1.1~1.10" />
+        </h1>
+
+        <!--img-->
+        <div class="footPrint">
+            <div class="dogFoot print01 animated fadeIn"><img src="../images/event05/dog_foot01.png" alt="" /></div>
+            <div class="dogFoot print02 animated fadeIn"><img src="../images/event05/dog_foot02.png" alt="" /></div>
+            <div class="dogFoot print03 animated fadeIn"><img src="../images/event05/dog_foot03.png" alt="" /></div>
+            <div class="dogFoot print04 animated fadeIn"><img src="../images/event05/dog_foot04.png" alt="" /></div>
+            <div class="dogFoot print05 animated fadeIn"><img src="../images/event05/dog_foot05.png" alt="" /></div>
+            <div class="dogFoot print06 animated fadeIn"><img src="../images/event05/dog_foot06.png" alt="" /></div>
+        </div>
+
+        <div class="hidden">
+            <h2>2018년 황금 개띠해를 맞아</h2>
+            2018년 1월 1일 ` 1월 10일 드래곤네스트를 플레이하면<br>
+            <strong>신년 이벤트 포인트</strong>를 얻어 <strong>황금 강아지 가면</strong>과 <strong>꼬리</strong>로 교환할 수 있습니다.<br><br>
+
+            <dl>
+                <dt>1분 접속(1 minutes)</dt><dd>신년 이벤트 <strong>포인트 +1</strong> 지급</dd>
+                <dt>18분 접속(18 minutes)</dt><dd>신년 이벤트 <strong>포인트 +2</strong> 지급</dd>
+                <dt>20분 접속(20 minutes)</dt><dd>신년 이벤트 <strong>포인트 +3</strong> 지급</dd>
+            </dl>
+
+            <h2>보상아이템</h2>
+            <dl>
+                <dt>신년 이벤트 <strong>포인트 20</strong></dt><dd>황금 강아지 가면</dd>
+                <dt>신년 이벤트 <strong>포인트 18</strong></dt><dd>황금 강아지 꼬리</dd>
+                <dd>이야기꾼 '케시'를 찾아주세요.</dd>
+            </dl>
+        </div>
+
+        <!--go update-->
+        <p class="goUpdate"><a href="#"><img src="../images/event05/btn_goUpdate.png" alt="신년 이벤트 패치노트 바로가기" /></a></p>
+    </section>
+
+    <footer class="hidden"><p>COPYRIGHT(c) EYEDENTITYGAMES CO. Ltd., ALL RIGHTS RESERVED.</p></footer>
+</div>
+
+</body>
+</html>

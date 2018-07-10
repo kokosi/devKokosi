@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+    <meta name="description" content="드래곤 네스트 12월 이벤트 - 드네 밖은 위험해!" />
+    <meta name="author" content="드래곤 네스트" />
+    <meta name="keywords" content="드래곤네스트, 드래곤네스트" />
+    <title>드래곤 네스트 - 12월 업데이트</title>
+    <!--css-->
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../css/animate.css" />
+    <!--js-->
+    <script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-parallax.js"></script>
+    <script type="text/javascript">
+
+        //quick
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 100) {
+                $('.quickBtn_event02').addClass('show').fadeIn();
+            } else {
+                $('.quickBtn_event02').fadeOut().removeClass('show');
+            }
+        });
+
+        //jelly
+        $( document ).mousemove(function(e) {
+            $('.jelly1').parallax(-30,e);
+            $('.jelly2').parallax(20,e);
+        });
+
+
+    </script>
+
+</head>
+<body>
+
+<div id="wrap" class="event02">
+
+    <!--quick btns-->
+    <div class="quickBtn_event02">
+        <p class="hidden">12월 핫이슈</p>
+        <ul>
+            <li><a href="#">Top</a></li>
+            <li><a href="#">그린 드래곤 네스트</a></li>
+            <li><a href="#">미라클 젤리젤리</a></li>
+            <li><a href="#">크리스마스 이벤트</a></li>
+            <li><a href="#">2017 드네 연말정산</a></li>
+            <li><a href="#">신년 이벤트</a></li>
+        </ul>
+
+    </div>
+
+    <!--jelly set-->
+    <div class="jelly jelly1"></div>
+    <div class="jelly jelly2"></div>
+
+    <section id="mainWrap">
+        <!--gnb-->
+        <div class="gnb">
+            <p class="logo"><img src="../images/event02/logo.png" alt="드래곤 네스트" /></p>
+            <a class="goHome" href="#"><img src="../images/event02/btn_home.png" alt="드네홈 바로가기" /></a>
+        </div>
+
+        <!--title-->
+        <h1 class="animated rubberBand"><img src="../images/event02/title.png" alt="상큼맛 미라클 젤리젤리-업데이트: 2017년 12월 14일 정기점검 후" /></h1>
+
+        <div class="hidden">
+            <h2>미라클★젤리젤리!</h2>
+            종족 불문, 신분 불문, 오로지 <strong>마법소녀가</strong> 되고 싶다는<br>
+            순수한 열망만으로 움직이는 <strong>비밀 학교, 미라클 젤리젤리!</strong><br>
+            그러나 혹독한 수련에 지친 마법소녀 견습생이 뿜어내는<br>
+            검은 오라에 젤리들이 <strong>흉악한 몬스터</strong>로 각성하고 마는데..<br>
+            상큼맛 <strong>미라클 젤리를 손에 넣은 용사여, 달려라!</strong><br>
+            오늘도 알테이아의 아이들에게 ★~꿈과 희망~★을<br>
+            전파하기 위한 상큼함을 연마한다!<br><br>
+
+            "나, <strong>마법소녀</strong>가 될 거야.<br>
+            알테이아의 아이들에게 <strong>☆~꿈과 희망~☆</strong>을 전해주고 싶어.<br>
+            현실성 제로의 소망이라 해도 괜찮아.<br>
+            젤리처럼 상↗큼↘한↗ 너와 함께라면!<br><br>
+
+            기다리고 있을게!<br>
+            이곳, <strong>미라클 젤리젤리 스테이지</strong>에서-☆☆"
+        </div>
+
+        <!--go update-->
+        <p class="goUpdate"><a href="#"><img src="../images/event02/btn_goUpdate.png" alt="미라클 젤리젤리 업데이트 바로가기" /></a></p>
+    </section>
+
+    <footer class="hidden"><p>COPYRIGHT(c) EYEDENTITYGAMES CO. Ltd., ALL RIGHTS RESERVED.</p></footer>
+</div>
+
+</body>
+</html>
