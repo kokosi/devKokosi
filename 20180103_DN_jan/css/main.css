@@ -1,0 +1,627 @@
+@charset "UTF-8";
+/*
+  2018-01-03
+  ENPgames_YJ
+*/
+/*reset*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, input, select, textarea, button, section {
+  margin: 0;
+  padding: 0; }
+
+html {
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%; }
+
+p {
+  word-wrap: break-word; }
+
+li {
+  list-style-type: none; }
+
+table {
+  border-collapse: collapse; }
+
+img, fieldset, iframe {
+  border: 0; }
+
+img {
+  border: none;
+  vertical-align: top; }
+
+input {
+  vertical-align: middle;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+input, select, textarea, button {
+  vertical-align: middle; }
+
+button {
+  border: 0 none;
+  background-color: transparent;
+  cursor: pointer; }
+
+a {
+  text-decoration: none;
+  color: #666; }
+
+em {
+  font-style: normal; }
+
+textarea:focus, input:focus {
+  outline: 0; }
+
+article, aside, canvas, details, embed, figcaption, figure, footer, header, menu, nav, section, summary, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr {
+  display: block; }
+
+body, code {
+  color: #666;
+  font: 13px/1.25 "Malgun Gothic", 맑은 고딕, sans-serif;
+  background: #fff; }
+
+input, select, textarea {
+  color: #333;
+  font-size: 13px;
+  line-height: 1em;
+  font-family: "Malgun Gothic", 맑은 고딕, sans-serif; }
+
+.hidden {
+  font: 0px/0 a;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  visibility: hidden;
+  width: 0;
+  text-indent: -99999px; }
+
+.hide {
+  display: none !important; }
+
+.clear {
+  clear: both; }
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+#wrap {
+  position: relative;
+  width: 100%; }
+  #wrap .quickBtn {
+    position: fixed;
+    top: 400px;
+    right: 0;
+    width: 174px;
+    height: 525px;
+    background: url("../images/event01/quick_btnOffSet.png") no-repeat;
+    z-index: 99999; }
+    #wrap .quickBtn .quickTop {
+      width: 174px;
+      height: 52px; }
+      #wrap .quickBtn .quickTop li {
+        width: 87px;
+        height: 52px;
+        float: left; }
+        #wrap .quickBtn .quickTop li a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          text-indent: -99999px; }
+        #wrap .quickBtn .quickTop li:nth-child(1):hover {
+          background: url("../images/event01/quick_goHome_on.jpg") no-repeat; }
+        #wrap .quickBtn .quickTop li:nth-child(2):hover {
+          background: url("../images/event01/quick_goIntro_on.jpg") no-repeat; }
+    #wrap .quickBtn .quickMain li {
+      width: 174px;
+      height: 118px;
+      margin-bottom: 1px; }
+      #wrap .quickBtn .quickMain li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-indent: -99999px; }
+      #wrap .quickBtn .quickMain li:hover, #wrap .quickBtn .quickMain li.active {
+        background: url("../images/event01/quick_btnOnSet.jpg") no-repeat; }
+        #wrap .quickBtn .quickMain li:hover:nth-child(1), #wrap .quickBtn .quickMain li.active:nth-child(1) {
+          background-position: 0 0; }
+        #wrap .quickBtn .quickMain li:hover:nth-child(2), #wrap .quickBtn .quickMain li.active:nth-child(2) {
+          background-position: 0 -119px; }
+        #wrap .quickBtn .quickMain li:hover:nth-child(3), #wrap .quickBtn .quickMain li.active:nth-child(3) {
+          background-position: 0 -238px; }
+        #wrap .quickBtn .quickMain li:hover:nth-child(4), #wrap .quickBtn .quickMain li.active:nth-child(4) {
+          background-position: 0 -357px; }
+
+.intro {
+  height: 1465px;
+  background: url("../images/intro/bg.jpg") center 0 no-repeat; }
+  .intro #mainWrap {
+    position: relative;
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    background: #fff url("../images/intro/main_bg.jpg") center 0 no-repeat; }
+    .intro #mainWrap ul {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 9999; }
+      .intro #mainWrap ul li {
+        width: 480px;
+        height: 610px;
+        position: absolute; }
+        .intro #mainWrap ul li a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          text-indent: -99999px; }
+        .intro #mainWrap ul li:nth-child(1) {
+          left: -360px; }
+        .intro #mainWrap ul li:nth-child(2) {
+          left: 120px; }
+        .intro #mainWrap ul li:nth-child(3) {
+          left: 600px; }
+        .intro #mainWrap ul li:nth-child(4) {
+          left: 1080px; }
+    .intro #mainWrap .goHome {
+      display: block;
+      width: 596px;
+      height: 80px;
+      position: absolute;
+      bottom: 215px;
+      left: 302px;
+      text-indent: -99999px;
+      z-index: 9999; }
+  .intro .cloudWrap {
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%; }
+@-webkit-keyframes cloudFlow_left {
+  0% {
+    margin-left: -1920px; }
+  100% {
+    margin-left: 100%; } }
+@keyframes cloudFlow_left {
+  0% {
+    margin-left: -1920px; }
+  100% {
+    margin-left: 100%; } }
+@-webkit-keyframes cloudFlow_right {
+  0% {
+    margin-left: 100%; }
+  100% {
+    margin-left: -1920px; } }
+@keyframes cloudFlow_right {
+  0% {
+    margin-left: 100%; }
+  100% {
+    margin-left: -1920px; } }
+    .intro .cloudWrap .cloud {
+      position: absolute; }
+      .intro .cloudWrap .cloud.cloud01 {
+        width: 169px;
+        height: 86px;
+        background: url("../images/intro/cloud01.png") no-repeat;
+        top: 871px;
+        left: 108px;
+        animation: cloudFlow_left 35s linear infinite; }
+      .intro .cloudWrap .cloud.cloud02 {
+        width: 211px;
+        height: 106px;
+        background: url("../images/intro/cloud02.png") no-repeat;
+        top: 558px;
+        left: 340px;
+        animation: cloudFlow_left 40s linear infinite; }
+      .intro .cloudWrap .cloud.cloud03 {
+        width: 211px;
+        height: 106px;
+        background: url("../images/intro/cloud03.png") no-repeat;
+        top: 1030px;
+        left: 387px;
+        animation: cloudFlow_right 30s linear infinite; }
+      .intro .cloudWrap .cloud.cloud04 {
+        width: 149px;
+        height: 76px;
+        background: url("../images/intro/cloud04.png") no-repeat;
+        top: 764px;
+        left: 663px;
+        animation: cloudFlow_right 35s linear infinite; }
+      .intro .cloudWrap .cloud.cloud05 {
+        width: 211px;
+        height: 106px;
+        background: url("../images/intro/cloud05.png") no-repeat;
+        top: 888px;
+        left: 1321px;
+        animation: cloudFlow_left 30s linear infinite; }
+      .intro .cloudWrap .cloud.cloud06 {
+        width: 149px;
+        height: 76px;
+        background: url("../images/intro/cloud06.png") no-repeat;
+        top: 184px;
+        left: 1381px;
+        animation: cloudFlow_left 35s linear infinite; }
+      .intro .cloudWrap .cloud.cloud07 {
+        width: 159px;
+        height: 80px;
+        background: url("../images/intro/cloud07.png") no-repeat;
+        top: 1029px;
+        left: 1616px;
+        animation: cloudFlow_left 40s linear infinite; }
+      .intro .cloudWrap .cloud.cloud08 {
+        width: 149px;
+        height: 76px;
+        background: url("../images/intro/cloud08.png") no-repeat;
+        top: 265px;
+        left: 1828px;
+        animation: cloudFlow_left 30s linear infinite; }
+
+.event01 {
+  height: 3600px;
+  background: url("../images/event01/bg.jpg") center 0 no-repeat; }
+  .event01 #mainWrap {
+    position: relative;
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    background: #fff url("../images/event01/main_bg.jpg") center 0 no-repeat; }
+    .event01 #mainWrap .gnb .goHome {
+      position: absolute;
+      top: 48px;
+      left: -315px;
+      width: 51px;
+      height: 51px; }
+    .event01 #mainWrap .gnb .logo {
+      position: absolute;
+      top: 42px;
+      left: 1275px;
+      width: 253px;
+      height: 122px; }
+    .event01 #mainWrap .lightning {
+      position: absolute;
+      top: 247px;
+      width: 1245px;
+      height: 672px; }
+      .event01 #mainWrap .lightning.lightning1 {
+        left: 15px;
+        width: 360px;
+        background: url("../images/event01/ef_light01.png") no-repeat;
+        -webkit-animation-delay: 1.5s;
+        -moz-animation-delay: 1.5s;
+        -o-animation-delay: 1.5s;
+        animation-delay: 1.5s; }
+      .event01 #mainWrap .lightning.lightning2 {
+        left: 610px;
+        width: 326px;
+        background: url("../images/event01/ef_light02.png") no-repeat;
+        -webkit-animation-delay: 1s;
+        -moz-animation-delay: 1s;
+        -o-animation-delay: 1s;
+        animation-delay: 1s; }
+      .event01 #mainWrap .lightning.lightning3 {
+        left: 936px;
+        width: 559px;
+        background: url("../images/event01/ef_light03.png") no-repeat;
+        -webkit-animation-delay: 2s;
+        -moz-animation-delay: 2s;
+        -o-animation-delay: 2s;
+        animation-delay: 2s; }
+    .event01 #mainWrap h1 {
+      position: relative;
+      width: 1106px;
+      top: 535px;
+      margin: 0 auto; }
+      .event01 #mainWrap h1 img {
+        position: absolute; }
+        .event01 #mainWrap h1 img.title_main {
+          left: 170px; }
+        .event01 #mainWrap h1 img.title_sub {
+          top: 243px; }
+    .event01 #mainWrap .goUpdate {
+      position: absolute;
+      top: 871px;
+      right: 69px;
+      width: 217px;
+      height: 217px;
+      z-index: 99;
+      text-indent: -99999px; }
+    .event01 #mainWrap .videoWrap {
+      position: relative;
+      top: 1169px;
+      width: 1030px;
+      height: 583px;
+      margin: 0 auto; }
+      .event01 #mainWrap .videoWrap .videoTitle {
+        position: absolute;
+        top: -42px;
+        left: 274px; }
+    .event01 #mainWrap .skillWrap {
+      position: relative;
+      top: 1188px;
+      width: 1062px;
+      margin: 0 auto;
+      z-index: 9999; }
+      .event01 #mainWrap .skillWrap dd {
+        width: 210px;
+        height: 202px;
+        float: left; }
+        .event01 #mainWrap .skillWrap dd a {
+          display: block;
+          width: 210px;
+          height: 202px;
+          text-indent: -99999px; }
+        .event01 #mainWrap .skillWrap dd.skillF {
+          margin: 0 1px 0 110px; }
+    .event01 #mainWrap .cha_left {
+      position: absolute;
+      top: 1026px;
+      left: -360px;
+      z-index: 999; }
+
+.event02 {
+  height: 8070px;
+  background: url("../images/event02/bg.jpg") center 0 no-repeat; }
+  .event02 .goTop {
+    display: none;
+    position: fixed;
+    right: 190px;
+    top: 400px;
+    width: 65px;
+    height: 65px;
+    background: url("../images/event02/btn_top.png") no-repeat;
+    z-index: 99999;
+    text-indent: -99999px; }
+  .event02 #mainWrap {
+    position: relative;
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    background: #fff url("../images/event02/main_bg.jpg") center 0 no-repeat; }
+    .event02 #mainWrap .logo {
+      position: absolute;
+      top: 50px;
+      left: -295px; }
+    .event02 #mainWrap .goHome {
+      position: absolute;
+      top: 71px;
+      right: 0;
+      z-index: 9999; }
+    .event02 #mainWrap .topT {
+      position: relative;
+      z-index: 999; }
+      .event02 #mainWrap .topT .top_title01 {
+        position: absolute;
+        top: 234px;
+        left: -360px;
+        -webkit-animation-duration: 0.5s;
+        -moz-animation-duration: 0.5s;
+        -o-animation-duration: 0.5s;
+        animation-duration: 0.5s; }
+      .event02 #mainWrap .topT .top_title02 {
+        position: absolute;
+        top: 150px;
+        right: -360px;
+        -webkit-animation-delay: 0.5s;
+        -moz-animation-delay: 0.5s;
+        -o-animation-delay: 0.5s;
+        animation-delay: 0.5s;
+        -webkit-animation-duration: 0.5s;
+        -moz-animation-duration: 0.5s;
+        -o-animation-duration: 0.5s;
+        animation-duration: 0.5s; }
+    .event02 #mainWrap .main_cha {
+      position: absolute;
+      top: 0;
+      left: 9px;
+      z-index: 99;
+      -webkit-animation-duration: 3s;
+      -moz-animation-duration: 3s;
+      -o-animation-duration: 3s;
+      animation-duration: 3s;
+      -webkit-animation-delay: 1.5s;
+      -moz-animation-delay: 1.5s;
+      -o-animation-delay: 1.5s;
+      animation-delay: 1.5s; }
+    .event02 #mainWrap .middleT {
+      position: absolute;
+      bottom: 2772px;
+      left: -14px;
+      -webkit-animation-delay: 1.5s;
+      -moz-animation-delay: 1.5s;
+      -o-animation-delay: 1.5s;
+      animation-delay: 1.5s;
+      -webkit-animation-duration: 0.5s;
+      -moz-animation-duration: 0.5s;
+      -o-animation-duration: 0.5s;
+      animation-duration: 0.5s; }
+
+.event03 {
+  height: 1072px;
+  background: url("../images/event03/bg.jpg") center 0 no-repeat; }
+  .event03 #mainWrap {
+    position: relative;
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    background: #fff url("../images/event03/main_bg.jpg") center 0 no-repeat; }
+    .event03 #mainWrap .goHome {
+      display: block;
+      width: 227px;
+      height: 34px;
+      position: absolute;
+      top: 0;
+      right: -24px;
+      text-indent: -99999px; }
+    .event03 #mainWrap .goUpdate {
+      display: block;
+      width: 338px;
+      height: 65px;
+      position: absolute;
+      bottom: 146px;
+      left: 431px;
+      text-indent: -99999px; }
+
+.event04 {
+  height: 3783px;
+  background: url("../images/event04/bg.jpg") center 0 no-repeat; }
+  .event04 #mainWrap {
+    position: relative;
+    width: 1100px;
+    height: 100%;
+    margin: 0 auto;
+    background: #fff url("../images/event04/main_bg.jpg") center 0 no-repeat; }
+    .event04 #mainWrap h1 {
+      position: relative;
+      width: 839px;
+      top: 403px;
+      margin: 0 auto;
+      text-align: center; }
+      .event04 #mainWrap h1 .zoomInUp {
+        -webkit-animation-delay: 0.5s;
+        -moz-animation-delay: 0.5s;
+        -o-animation-delay: 0.5s;
+        animation-delay: 0.5s; }
+    .event04 #mainWrap .myCoin {
+      position: relative;
+      top: 734px;
+      left: -1px;
+      width: 273px;
+      height: 150px;
+      margin: 0 auto;
+      color: #ffd200;
+      font-size: 40px;
+      text-align: center;
+      letter-spacing: -3px; }
+      .event04 #mainWrap .myCoin strong {
+        box-sizing: border-box;
+        display: block;
+        padding-top: 60px; }
+        .event04 #mainWrap .myCoin strong span {
+          font-size: 60px; }
+    .event04 #mainWrap .exchangeList {
+      position: relative;
+      top: 912px;
+      width: 962px;
+      margin: 0 auto; }
+      .event04 #mainWrap .exchangeList li {
+        position: relative;
+        width: 230px;
+        height: 205px;
+        float: left;
+        margin-right: 14px;
+        margin-bottom: 17px; }
+        .event04 #mainWrap .exchangeList li:nth-child(4n) {
+          margin-right: 0; }
+        .event04 #mainWrap .exchangeList li.mb18 {
+          margin-bottom: 18px; }
+        .event04 #mainWrap .exchangeList li.mb20 {
+          margin-bottom: 20px; }
+        .event04 #mainWrap .exchangeList li a {
+          display: block;
+          width: 230px;
+          height: 205px;
+          text-indent: -99999px; }
+        .event04 #mainWrap .exchangeList li img {
+          position: absolute;
+          bottom: 0;
+          left: 0; }
+    .event04 #mainWrap .entryList {
+      position: relative;
+      top: 1202px;
+      width: 962px;
+      margin: 0 auto; }
+      .event04 #mainWrap .entryList li {
+        position: relative;
+        width: 300px;
+        height: 205px;
+        float: left;
+        margin-right: 31px;
+        margin-bottom: 19px; }
+        .event04 #mainWrap .entryList li .count {
+          box-sizing: border-box;
+          display: inline-block;
+          padding: 5px 13px;
+          background: #810a2a;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          font-size: 12px;
+          font-weight: bold;
+          color: #fff;
+          letter-spacing: -1.5px;
+          position: absolute;
+          top: 135px; }
+          .event04 #mainWrap .entryList li .count span {
+            font-size: 13px;
+            color: #ffd200; }
+          .event04 #mainWrap .entryList li .count.count_my {
+            right: 0;
+            background: #3d1520; }
+        .event04 #mainWrap .entryList li a {
+          display: block;
+          width: 300px;
+          height: 44px;
+          position: absolute;
+          bottom: 0;
+          text-indent: -99999px; }
+        .event04 #mainWrap .entryList li:nth-child(3n) {
+          margin-right: 0; }
+    .event04 #mainWrap .caution {
+      display: block;
+      position: absolute;
+      left: 376px;
+      width: 395px;
+      height: 138px; }
+      .event04 #mainWrap .caution.caution01 {
+        bottom: 1420px; }
+      .event04 #mainWrap .caution.caution02 {
+        bottom: 237px; }
+  .event04 .popWrap {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(89, 73, 63, 0.5);
+    z-index: 999999;
+    width: 100%;
+    height: 100%; }
+    .event04 .popWrap .popUp {
+      position: fixed;
+      top: 50%;
+      margin-top: -277px;
+      left: 50%;
+      margin-left: -235px;
+      height: 554px;
+      width: 470px;
+      background: url("../images/event04/popup_coupon.png") no-repeat;
+      font-weight: bold;
+      text-align: center; }
+      .event04 .popWrap .popUp .item {
+        position: relative;
+        top: 315px;
+        font-size: 30px;
+        color: #fff889; }
+      .event04 .popWrap .popUp input[type="text"] {
+        position: relative;
+        top: 364px;
+        width: 397px;
+        height: 49px;
+        box-sizing: border-box;
+        font-size: 40px;
+        color: #ffe400;
+        font-weight: bold;
+        letter-spacing: -2.5px;
+        border: 0;
+        text-align: center;
+        background: none; }
+      .event04 .popWrap .popUp .close {
+        display: inline-block;
+        position: relative;
+        top: 389px;
+        width: 104px;
+        height: 35px;
+        text-indent: -99999px; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,630 @@
+@charset "UTF-8";
+
+/*
+  2018-01-03
+  ENPgames_YJ
+*/
+
+/*reset*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, input, select, textarea, button, section {margin:0; padding:0;}
+html{overflow-x: hidden;width: 100%;height: 100%;}
+p{word-wrap: break-word;}
+li {list-style-type: none;}
+table {border-collapse:collapse;}
+img, fieldset, iframe {border: 0;}
+img {border:none; vertical-align: top;}
+input {vertical-align: middle; -moz-box-sizing:border-box; -webkit-box-sizing: border-box; box-sizing:border-box;}
+input, select, textarea, button { vertical-align: middle; }
+button { border: 0 none; background-color: transparent; cursor: pointer; }
+a {text-decoration: none; color:#666;}
+em {font-style: normal;}
+textarea:focus, input:focus{outline: 0;}
+article, aside, canvas, details, embed, figcaption, figure, footer, header, menu, nav, section, summary, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { display: block; }
+body, code{color:#666; font:13px/1.25 "Malgun Gothic", 맑은 고딕, sans-serif; background:#fff;}
+input, select, textarea{color:#333; font-size:13px; line-height:1em;  font-family:"Malgun Gothic", 맑은 고딕, sans-serif;}
+.hidden{font:0px/0 a; height:0; overflow:hidden; position:absolute; visibility:hidden; width:0; text-indent: -99999px;}
+.hide{display:none !important;}
+.clear{clear: both;}
+.clearfix:after{content:"";display:block;clear:both;}
+
+
+
+//setting
+$marAuto:0 auto;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+@mixin boxSize($width:null, $height:null){
+  width: $width;
+  height: $height;
+}
+@mixin boxSize100{
+  width: 100%;
+  height: 100%;
+}
+@mixin aniName($name){
+  -webkit-animation-name: $name;
+  -moz-animation-name: $name;
+  -o-animation-name: $name;
+  animation-name: $name;
+}
+@mixin aniDuration($duration){
+  -webkit-animation-duration: $duration;
+  -moz-animation-duration: $duration;
+  -o-animation-duration: $duration;
+  animation-duration: $duration;
+}
+@mixin aniDelay($sec){
+  -webkit-animation-delay: $sec;
+  -moz-animation-delay: $sec;
+  -o-animation-delay: $sec;
+  animation-delay: $sec;
+}
+@mixin setAbsolute($top:null,$right:null,$bottom:null,$left:null) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+}
+@mixin popCenter($width, $height) {
+  position: fixed;
+  top: 50%;
+  margin-top: - $height / 2;
+  left: 50%;
+  margin-left: - $width / 2;
+  height: $height;
+  width: $width;
+}
+
+
+
+//--------------------START--------------------//
+#wrap{
+  position:relative;
+  width: 100%;
+
+  //quick btn
+  .quickBtn{
+    position: fixed;
+    top: 400px; right: 0;
+    @include boxSize(174px, 525px);
+    background: url("../images/event01/quick_btnOffSet.png") no-repeat;
+    z-index: 99999;
+    .quickTop{
+      @include boxSize(174px, 52px);
+      li{
+        @include boxSize(87px, 52px);
+        float: left;
+        a{
+          display: block;
+          @include boxSize100;
+          text-indent: -99999px;
+        }
+        &:nth-child(1):hover{
+          background: url("../images/event01/quick_goHome_on.jpg") no-repeat;
+        }
+        &:nth-child(2):hover{
+          background: url("../images/event01/quick_goIntro_on.jpg") no-repeat;
+        }
+      }
+    }
+    .quickMain{
+      li{
+        @include boxSize(174px, 118px);
+        margin-bottom: 1px;
+        a{
+          display: block;
+          @include boxSize100;
+          text-indent: -99999px;
+        }
+        &:hover, &.active{
+          background: url("../images/event01/quick_btnOnSet.jpg") no-repeat;
+          &:nth-child(1){
+            background-position: 0 0;
+          }
+          &:nth-child(2){
+            background-position: 0 -119px;
+          }
+          &:nth-child(3){
+            background-position: 0 -238px;
+          }
+          &:nth-child(4){
+            background-position: 0 -357px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+//-----------intro Content-----------//
+.intro{
+  height: 1465px;
+  background: url("../images/intro/bg.jpg") center 0 no-repeat;
+
+  #mainWrap {
+    position: relative;
+    @include boxSize(1200px, 100%);
+    margin: $marAuto;
+    background: #fff url("../images/intro/main_bg.jpg") center 0 no-repeat;
+    ul{
+      position: absolute;
+      top:0; left:0;
+      z-index: 9999;
+      li{
+        @include boxSize(480px, 610px);
+        position: absolute;
+        a{
+          display: block;
+          @include boxSize100;
+          text-indent: -99999px;
+        }
+        &:nth-child(1){
+          left: -360px;
+        }
+        &:nth-child(2){
+          left: 120px;
+        }
+        &:nth-child(3){
+          left: 600px;
+        }
+        &:nth-child(4){
+          left: 1080px;
+        }
+      }
+    }
+    .goHome{
+      display: block;
+      @include boxSize(596px, 80px);
+      position: absolute;
+      bottom: 215px; left: 302px;
+      text-indent: -99999px;
+      z-index: 9999;
+    }
+  }
+  //cloud
+  .cloudWrap{
+    z-index: 999;
+    position: absolute;
+    top:0;
+    @include boxSize100;
+
+    //flow animation
+    @-webkit-keyframes cloudFlow_left {
+      0% {margin-left: -1920px;}
+      100% {margin-left: 100%;}
+    }
+    @keyframes cloudFlow_left {
+      0% {margin-left: -1920px;}
+      100% {margin-left: 100%;}
+    }
+    @-webkit-keyframes cloudFlow_right {
+      0% {margin-left: 100%;}
+      100% {margin-left: -1920px;}
+    }
+    @keyframes cloudFlow_right {
+       0% {margin-left: 100%;}
+       100% {margin-left: -1920px;}
+     }
+
+    .cloud{
+      position: absolute;
+      &.cloud01{
+        @include boxSize(169px, 86px);
+        background: url("../images/intro/cloud01.png") no-repeat;
+        top: 871px; left: 108px;
+        animation: cloudFlow_left 35s linear infinite;
+      }
+      &.cloud02{
+        @include boxSize(211px, 106px);
+        background: url("../images/intro/cloud02.png") no-repeat;
+        top: 558px; left: 340px;
+        animation: cloudFlow_left 40s linear infinite;
+      }
+      &.cloud03{
+        @include boxSize(211px, 106px);
+        background: url("../images/intro/cloud03.png") no-repeat;
+        top: 1030px; left: 387px;
+        animation: cloudFlow_right 30s linear infinite;
+      }
+      &.cloud04{
+        @include boxSize(149px, 76px);
+        background: url("../images/intro/cloud04.png") no-repeat;
+        top: 764px; left: 663px;
+        animation: cloudFlow_right 35s linear infinite;
+      }
+      &.cloud05{
+        @include boxSize(211px, 106px);
+        background: url("../images/intro/cloud05.png") no-repeat;
+        top: 888px; left: 1321px;
+        animation: cloudFlow_left 30s linear infinite;
+      }
+      &.cloud06{
+        @include boxSize(149px, 76px);
+        background: url("../images/intro/cloud06.png") no-repeat;
+        top: 184px; left: 1381px;
+        animation: cloudFlow_left 35s linear infinite;
+      }
+      &.cloud07{
+        @include boxSize(159px, 80px);
+        background: url("../images/intro/cloud07.png") no-repeat;
+        top: 1029px; left: 1616px;
+        animation: cloudFlow_left 40s linear infinite;
+      }
+      &.cloud08{
+        @include boxSize(149px, 76px);
+        background: url("../images/intro/cloud08.png") no-repeat;
+        top: 265px; left: 1828px;
+        animation: cloudFlow_left 30s linear infinite;
+      }
+    }
+  }
+}
+
+//-----------event01 Content-----------//
+.event01{
+  height: 3600px;
+  background: url("../images/event01/bg.jpg") center 0 no-repeat;
+  #mainWrap {
+    position: relative;
+    @include boxSize(1200px, 100%);
+    margin: $marAuto;
+    background: #fff url("../images/event01/main_bg.jpg") center 0 no-repeat;
+    .gnb{
+      .goHome{
+        position: absolute;
+        top:48px; left: -315px;
+        @include boxSize(51px, 51px);
+      }
+      .logo{
+        position: absolute;
+        top:42px; left: 1275px;
+        @include boxSize(253px, 122px);
+      }
+    }
+    //lightning
+    .lightning{
+      position: absolute;
+      top: 247px;
+      @include boxSize(1245px, 672px);
+      &.lightning1{
+        left: 15px;
+        width: 360px;
+        background: url("../images/event01/ef_light01.png") no-repeat;
+        @include aniDelay(1.5s);
+      }
+      &.lightning2{
+        left: 610px;
+        width: 326px;
+        background: url("../images/event01/ef_light02.png") no-repeat;
+        @include aniDelay(1s);
+      }
+      &.lightning3{
+        left: 936px;
+        width: 559px;
+        background: url("../images/event01/ef_light03.png") no-repeat;
+        @include aniDelay(2s);
+      }
+    }
+    h1{
+      position: relative;
+      width: 1106px;
+      top: 535px;
+      margin: $marAuto;
+      img{
+        position: absolute;
+        &.title_main{
+          left: 170px;
+        }
+        &.title_sub{
+          top: 243px;
+        }
+      }
+    }
+    .goUpdate{
+      position: absolute;
+      top: 871px; right: 69px;
+      @include boxSize(217px, 217px);
+      z-index: 99;
+      text-indent: -99999px;
+    }
+    .videoWrap{
+      position: relative;
+      top:1169px;
+      @include boxSize(1030px, 583px);
+      margin: $marAuto;
+      .videoTitle{
+        position: absolute;
+        top: -42px; left: 274px;
+      }
+    }
+    .skillWrap{
+      position: relative;
+      top: 1188px;
+      width: 1062px;
+      margin: $marAuto;
+      z-index: 9999;
+      dd{
+        @include boxSize(210px, 202px);
+        float: left;
+        a{
+          display: block;
+          @include boxSize(210px, 202px);
+          text-indent: -99999px;
+        }
+        &.skillF{
+          margin: 0 1px 0 110px;
+        }
+      }
+    }
+    .cha_left{
+      position: absolute;
+      top: 1026px; left: -360px;
+      z-index: 999;
+    }
+  }
+}
+
+//-----------event02 Content-----------//
+.event02{
+  height: 8070px;
+  background: url("../images/event02/bg.jpg") center 0 no-repeat;
+
+  .goTop{
+    display: none;
+    position: fixed;
+    right: 190px; top: 400px;
+    @include boxSize(65px, 65px);
+    background: url("../images/event02/btn_top.png") no-repeat;
+    z-index: 99999;
+    text-indent: -99999px;
+  }
+
+  #mainWrap{
+    position: relative;
+    @include boxSize(1200px, 100%);
+    margin: $marAuto;
+    background: #fff url("../images/event02/main_bg.jpg") center 0 no-repeat;
+    .logo{
+      position: absolute;
+      top: 50px; left: -295px;
+    }
+    .goHome{
+      position: absolute;
+      top: 71px; right: 0;
+      z-index: 9999;
+    }
+    //h1
+    .topT{
+      position: relative;
+      z-index: 999;
+      .top_title01{
+        position: absolute;
+        top: 234px; left: -360px;
+        @include aniDuration(0.5s);
+      }
+      .top_title02{
+        position: absolute;
+        top: 150px; right: -360px;
+        @include aniDelay(0.5s);
+        @include aniDuration(0.5s);
+      }
+    }
+    .main_cha{
+      position: absolute;
+      top: 0; left: 9px;
+      z-index: 99;
+      @include aniDuration(3s);
+      @include aniDelay(1.5s);
+    }
+    //h1
+    .middleT{
+      position: absolute;
+      bottom: 2772px; left:-14px;
+      @include aniDelay(1.5s);
+      @include aniDuration(0.5s);
+    }
+  }
+}
+
+//-----------event03 Content-----------//
+.event03{
+  height: 1072px;
+  background: url("../images/event03/bg.jpg") center 0 no-repeat;
+  #mainWrap {
+    position: relative;
+    @include boxSize(1200px, 100%);
+    margin: $marAuto;
+    background: #fff url("../images/event03/main_bg.jpg") center 0 no-repeat;
+    .goHome{
+      display: block;
+      @include boxSize(227px, 34px);
+      position: absolute;
+      top:0; right: -24px;
+      text-indent: -99999px;
+    }
+    .goUpdate{
+      display: block;
+      @include boxSize(338px, 65px);
+      position: absolute;
+      bottom: 146px; left: 431px;
+      text-indent: -99999px;
+    }
+  }
+}
+
+//-----------event04 Content-----------//
+.event04{
+  height: 3783px;
+  background: url("../images/event04/bg.jpg") center 0 no-repeat;
+  #mainWrap {
+    position: relative;
+    @include boxSize(1100px, 100%);
+    margin: $marAuto;
+    background: #fff url("../images/event04/main_bg.jpg") center 0 no-repeat;
+    h1{
+      position: relative;
+      width: 839px;
+      top: 403px;
+      margin: $marAuto;
+      text-align: center;
+      .zoomInUp{
+        @include aniDelay(0.5s);
+      }
+    }
+    .myCoin{
+      position: relative;
+      top: 734px; left: -1px;
+      @include boxSize(273px, 150px);
+      margin: $marAuto;
+      color: #ffd200;
+      font-size: 40px;
+      text-align: center;
+      letter-spacing: -3px;
+      strong{
+        box-sizing: border-box;
+        display: block;
+        padding-top: 60px;
+        span{
+          font-size: 60px;
+        }
+      }
+    }
+    .exchangeList{
+      position: relative;
+      top: 912px;
+      width: 962px;
+      margin: $marAuto;
+      li{
+        position: relative;
+        @include boxSize(230px, 205px);
+        float: left;
+        margin-right: 14px;
+        margin-bottom: 17px;
+        &:nth-child(4n){
+          margin-right: 0;
+        }
+        &.mb18{
+          margin-bottom: 18px;
+        }
+        &.mb20{
+          margin-bottom: 20px;
+        }
+        a{
+          display: block;
+          @include boxSize(230px, 205px);
+          text-indent: -99999px;
+        }
+        img{
+          position: absolute;
+          bottom: 0; left: 0;
+        }
+      }
+    }
+    .entryList{
+      position: relative;
+      top: 1202px;
+      width: 962px;
+      margin: $marAuto;
+      li{
+        position: relative;
+        @include  boxSize(300px, 205px);
+        float: left;
+        margin-right: 31px;
+        margin-bottom: 19px;
+        .count{
+          box-sizing: border-box;
+          display: inline-block;
+          padding: 5px 13px;
+          background: #810a2a;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          font-size: 12px;
+          font-weight: bold;
+          color: #fff;
+          letter-spacing: -1.5px;
+          position: absolute;
+          top: 135px;
+          span{
+            font-size: 13px;
+            color: #ffd200;
+          }
+          &.count_my{
+            right: 0;
+            background: #3d1520;
+          }
+        }
+        a{
+          display: block;
+          @include  boxSize(300px, 44px);
+          position: absolute;
+          bottom: 0;
+          text-indent: -99999px;
+        }
+        &:nth-child(3n){
+          margin-right: 0;
+        }
+      }
+    }
+    .caution{
+      display: block;
+      position: absolute;
+      left: 376px;
+      @include boxSize(395px, 138px);
+      &.caution01{
+        bottom: 1420px;
+      }
+      &.caution02{
+        bottom: 237px;
+      }
+    }
+  }
+  //popup
+  .popWrap{
+    display: none;
+    position: fixed;
+    top:0; left:0;
+    background: rgba(89,73,63,0.5);
+    z-index: 999999;
+    @include boxSize(100%, 100%);
+    .popUp{
+      @include popCenter(470px, 554px);
+      background: url("../images/event04/popup_coupon.png") no-repeat;
+      font-weight: bold;
+      text-align: center;
+      .item{
+        position: relative;
+        top:315px;
+        font-size: 30px;
+        color: #fff889;
+      }
+      input[type="text"]{
+        position: relative;
+        top: 364px;
+        @include boxSize(397px, 49px);
+        box-sizing: border-box;
+        font-size: 40px;
+        color: #ffe400;
+        font-weight: bold;
+        letter-spacing: -2.5px;
+        border: 0;
+        text-align: center;
+        background: none;
+      }
+      .close{
+        display: inline-block;
+        position: relative;
+        top: 389px;
+        @include boxSize(104px, 35px);
+        text-indent:-99999px;
+
+      }
+    }
+  }
+}
